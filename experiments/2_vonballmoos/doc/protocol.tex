@@ -108,7 +108,7 @@ deviated from what was written.
 \section{Expression}
 
 Expression was done by the assistants ahead of time, the corresponding steps of
-the protocol are only listed for completness' sake.
+the protocol are only listed for completeness' sake.
 
 \begin{itemize}
 	\item From a freshly transformed plate (plasmid: pET28) of the given
@@ -239,14 +239,14 @@ mutant of the superoxide oxidase.
 	\item The BCA assays were incubated for \SI{15}{\min} at \SI{37}{\celsius}
 	\item A standard curve based on BSA was prepared by another group,
 		according to table \ref{tbl:bca_standard}.
-	\item The absorption of the dilutions and the standard curbe at
+	\item The absorption of the dilutions and the standard curve at
 		\SI{562}{\nm} was measured. % TODO link table?
 \end{itemize}
 
 \section{Preparation of transformed pre-culture}
 
 The following steps were performed by another group, and are listed for
-completness' sake.
+completeness' sake.
 
 \begin{itemize}
 	\item Pick 3 colonies from a freshly transformed plate with plasmid
@@ -397,7 +397,7 @@ then set aside for the next day.
 				\SI{0.25}{\milli\Molar}.
 		\end{itemize}
 	\item Samples were incubated at \SI{37}{\celsius}, and their OD$_{600}$
-		mesured every \SIrange{30}{60}{\min} until their absorbance had
+		measured every \SIrange{30}{60}{\min} until their absorbance had
 		reached $0.5$.
 
 		The measurement at \SI{90}{\min} was later found to be
@@ -413,8 +413,8 @@ then set aside for the next day.
 		the size and colour of the pellet observed.
 	\item After \SI{290}{\min} \SI{198}{\ul} of the culture were
 		solubilized with \SI{2}{\ml} of a \SI{10}{\percent} SDS stock
-		solution in a 96-well plate. The fluorescence was measurd with
-		a plate reader to deterine the amount of expressed protein. The
+		solution in a 96-well plate. The fluorescence was measured with
+		a plate reader to determine the amount of expressed protein. The
 		measurements for the LB samples were redone, as they had been
 		contaminated while being added to the well.
 % TODO: Link table with measurements?
@@ -467,9 +467,9 @@ figure \ref{fig:bca_absorption}.
 
 Discarding the two measurements which fall outside the range of the standard,
 and calculating the protein concentration of the undiluted sample, yields
-concentrations of \SI{21.552}{\ug\per\ml} and \SI{17.342}{\ug\per\ml}
+concentrations of \SI{21.552}{\mg\per\ml} and \SI{17.342}{\mg\per\ml}
 respectively. Using their average provides us with a protein concentration of
-\SI{19.447}{\ug\per\ml}.
+\SI{19.447}{\mg\per\ml}.
 
 \begin{table}
 	\centering
@@ -498,10 +498,10 @@ respectively. Using their average provides us with a protein concentration of
 		\toprule
 		Absorption & Concentration (calculated) & Dilution factor \\
 		\midrule
-		\SI{2.2966}{OD562} & \SI{2.783}{\ug\per\ml} & 1:5 \\
-		\SI{1.8855}{OD562} & \SI{2.279}{\ug\per\ml} & 1:10 \\
-		\SI{0.8671}{OD562} & \SI{1.030}{\ug\per\ml} & 1:20 \\
-		\SI{0.5388}{OD562} & \SI{0.628}{\ug\per\ml} & 1:40 \\
+		\SI{2.2966}{OD562} & \SI{2783}{\ug\per\ml} & 1:5 \\
+		\SI{1.8855}{OD562} & \SI{2279}{\ug\per\ml} & 1:10 \\
+		\SI{0.8671}{OD562} & \SI{1030}{\ug\per\ml} & 1:20 \\
+		\SI{0.5388}{OD562} & \SI{628}{\ug\per\ml} & 1:40 \\
 		\bottomrule
 	\end{tabu}
 	\caption{OD562 values of sample dilutions}
@@ -583,8 +583,86 @@ OD measurements. These values are further visualized in figure
 
 \chapter{Discussion}
 
-% TODO: Why transformed cells spread on bacteria treated plate?
-% TODO: Cite protocol where steps copied
+\section{Isolation of membranes}
+
+The relatively big difference of roughly \SI{20}{\percent} between the two
+usable OD562 measurements, coupled with two of the measurements being unusable
+due to being outside the supported range, is not ideal to determine the
+concentration of isolated membrane proteins. The big difference in
+concentration hints at one of dilutions being mixed or pipetted incorrectly. As
+only two values are available there is further no information on which dilution
+was affected.
+
+However, the concentration of either dilution as well as the average thereof
+implies that the protein concentration is high enough to achieve the
+\SI{10}{\mg\per\ml} required for further purification steps.
+
+\section{Transformation of bacterial cells}
+
+As the colonies were able to grow on a plate treated with kanamycin, we can
+conclude that the transformation was successful, and the plasmid - which also
+confers resistance to kanamycin - was taken in and had been retained.
+
+\section{Expression screening}
+
+\subsection{Bacteria growth}
+
+\subsubsection{IPTG- samples}
+
+All samples which were not treated with IPTG showed the typical growth pattern
+of bacterial cells, starting with a lag phase without growth, a log phase with
+linear growth, and finally a stationary phase where growth stagnated.
+Observation stopped before the decline phase, where cell density would have
+lowered, was entered.
+
+\subsubsection{IPTG+ samples}
+
+The IPTG+/Rha- sample behaved as expected too. Shortly after IPTG was added it
+induced the overexpression of HS, which caused cell growth to stop as all
+energy was put towards expression of HS.
+
+The IPTG+/Rha+ sample behaved mostly like the IPTG- samples, which was
+unexpected. As Rhamnose leads to the expression of T7 lysozyme, which inhibits
+the T7 polymerase, we expected the Rha+/IPTG+ sample to exhibit growth
+somewhere in between the IPTG- and the Rha-/IPTG+ samples, as the inhibition of
+the T7 polymerase would have limited the overexpression of HS, allowing the
+cell to continue growing to some extent.
+
+Possible explanations are that either too much Rhamnose was added, such that
+the inhibition of the T7 polymerase was too strong, or that no or too little
+IPTG had been added. The subsequent analysis of the protein expression using
+fluorescence seems to promote the later.
+
+\subsubsection{Medium comparison}
+
+Looking at how fast cell growth was in the different media it is evident that
+cells on LB grew the slowest, while cells on TB and ZYM-505 grew at roughly the
+same speed. No conclusion can be reached as far as the final cell density is
+concerned, as cells did not reach their stationary phase yet.
+
+\subsection{Protein expression}
+
+\subsubsection{Rha-/IPTG+}
+
+Comparing the normalized fluorescence measurements of the various samples it is
+evident that Rha-/IPTG+ samples had the highest protein expression across all
+media. This matches the expectation as HS will be expressed fully, without
+anything inhibiting it.
+
+\subsubsection{Cell growth on TB}
+
+Further, cells on the TB media seem to have expressed significantly more HS
+than on either the LB or ZYM-505 medium. As fluorescence of the Rha-/IPTG-
+sample is significantly higher compared to the Rha-/IPTG- samples of the other
+two media, it seems likely that this is due to a higher cell density rather
+than an increased number of proteins per cell.
+
+\subsubsection{Protein expression on ZYM-505}
+
+Lastly the ZYM-505 medium increased, without promoting general cell growth
+unlike the TB medium, the fluorescence of the Rha-/IPTG+ sample. This implies
+that, while the number of cells stayed comparable to the LB medium, the number
+of HS proteins proteins per cell has increased.
 
 \end{document}
 
