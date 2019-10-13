@@ -1,0 +1,62 @@
+Concentration Analysis Report
+ 
+Report time	10/10/2019 2:23:15 PM
+Method	 
+Batch name	C:\Users\Sir Cary60 II\Desktop\Data von Ballmoos group\abbas\bcii\191010 bcii 2.BCN
+Application	Concentration 5.0.0.999
+Operator	 
+Instrument Settings
+ 
+Instrument	Cary 60
+Instrument version no.	2.00
+Wavelength (nm)	562.0
+Ordinate Mode	Abs
+Ave Time (sec)	0.1000
+Replicates	1
+Standard/Sample averaging	OFF
+Weight and volume corrections	OFF
+Fit type	Linear
+Min R²	0.95000
+Concentration units	g/L
+Zero Report
+Read	Abs (562.0 nm)
+Zero	0.7569
+ 	 
+Calibration
+Collection time 10/10/2019 2:23:30 PM
+Standard	Concentration g/L	F	Readings
+Std 1	0.000	 	 0.0053
+Std 2	0.025	 	 0.0225
+Std 3	0.125	 	 0.1173
+Std 4	0.250	 	 0.2413
+Std 5	0.500	 	 0.4756
+Std 6	0.750	 	 0.6433
+Std 7	1.000	 	 0.8755
+Std 8	1.500	 	 1.2418
+Std 9	2.000	 	 1.6353
+Calibration eqn	Abs = 0.81542*Conc +0.02701
+Correlation Coefficient	0.99821
+Calibration time 10/10/2019 2:25:59 PM
+Analysis
+ 
+Collection time	10/10/2019 2:25:59 PM
+Sample	Concentration g/L	F	Readings
+Sample 1	0.624	 	 0.5357
+Sample 2	1.141	 	 0.9574
+Sample 3	1.887	 	 1.5661
+Sample 4	2.906	O	 2.3967
+
+Sample 5	0.628	 	 0.5388
+Sample 6	1.030	 	 0.8671
+Sample 7	2.279	O	 1.8855
+Sample 8	2.783	O	 2.2966
+
+Sample 9	0.435	 	 0.3818
+Sample 10	0.851	 	 0.7212
+Sample 11	1.535	 	 1.2790
+Sample 12	2.761	O	 2.2786
+Read sequence cancelled
+Results Flags Legend
+ 
+U = Uncalibrated	O = Overrange
+N = Not used in calibration	R = Repeat reading

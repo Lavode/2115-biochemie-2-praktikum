@@ -1,0 +1,6 @@
+admin/
+experiments/*/*.pdf
+experiments/**/*.log
+experiments/**/*.pdf
+.Rproj.user
+r.Rproj
