@@ -100,7 +100,7 @@
 \begin{document}
 \maketitle
 
-\chapter{Procedure}
+\chapter{Procedure\cite{skript_ballmoos}}
 
 The listed steps are based on the provided script, with changes where we
 deviated from what was written.
@@ -450,6 +450,8 @@ then set aside for the next day.
 
 \section{Protein concentration via BCA assay}
 
+\label{sec:protein_concentration}
+
 The measured absorption values at \SI{562}{\nm} of the prepared standard are
 shown in table \ref{tbl:bca_absorption_standard}. Based on those, the device
 calculated a linear regression:
@@ -520,7 +522,7 @@ respectively. Using their average provides us with a protein concentration of
 \subsection{OD measurements during bacterial growth}
 
 To measure the stages of bacterial growth before and after induction, the
-absorption at \SI{600}{\m} was measured in regular intervals. These results are
+absorption at \SI{600}{\nm} was measured in regular intervals. These results are
 found in table \ref{tbl:absorption_expression}.
 
 As mentioned in the protocol the measurement at \SI{90}{\min} was faulty, and
@@ -586,12 +588,13 @@ OD measurements. These values are further visualized in figure
 \section{Isolation of membranes}
 
 The relatively big difference of roughly \SI{20}{\percent} between the two
-usable OD562 measurements, coupled with two of the measurements being unusable
-due to being outside the supported range, is not ideal to determine the
-concentration of isolated membrane proteins. The big difference in
-concentration hints at one of dilutions being mixed or pipetted incorrectly. As
-only two values are available there is further no information on which dilution
-was affected.
+usable protein concentrations calculated in section
+\ref{sec:protein_concentration}, coupled with two of the measurements being
+unusable due to being outside the supported range, is not ideal for determining
+the concentration of isolated membrane proteins. The big difference in
+concentration hints at one of the dilutions being mixed or pipetted
+incorrectly. As only two values are available there is further no information
+on which dilution was affected.
 
 However, the concentration of either dilution as well as the average thereof
 implies that the protein concentration is high enough to achieve the
@@ -599,7 +602,7 @@ implies that the protein concentration is high enough to achieve the
 
 \section{Transformation of bacterial cells}
 
-As the colonies were able to grow on a plate treated with kanamycin, we can
+As the colonies were able to grow on a plate treated with kanamycin we can
 conclude that the transformation was successful, and the plasmid - which also
 confers resistance to kanamycin - was taken in and had been retained.
 
@@ -607,10 +610,14 @@ confers resistance to kanamycin - was taken in and had been retained.
 
 \subsection{Bacteria growth}
 
+All references to data in this section refer to figure
+\ref{fig:absorption_expression} and table \ref{tbl:absorption_expression}
+respectively.
+
 \subsubsection{IPTG- samples}
 
-All samples which were not treated with IPTG showed the typical growth pattern
-of bacterial cells, starting with a lag phase without growth, a log phase with
+Samples which were not treated with IPTG showed the typical growth pattern of
+bacterial cells. They started with a lag phase without growth, a log phase with
 linear growth, and finally a stationary phase where growth stagnated.
 Observation stopped before the decline phase, where cell density would have
 lowered, was entered.
@@ -623,15 +630,15 @@ energy was put towards expression of HS.
 
 The IPTG+/Rha+ sample behaved mostly like the IPTG- samples, which was
 unexpected. As Rhamnose leads to the expression of T7 lysozyme, which inhibits
-the T7 polymerase, we expected the Rha+/IPTG+ sample to exhibit growth
-somewhere in between the IPTG- and the Rha-/IPTG+ samples, as the inhibition of
-the T7 polymerase would have limited the overexpression of HS, allowing the
-cell to continue growing to some extent.
+the T7 polymerase\cite{memstar}, we expected the Rha+/IPTG+ sample to exhibit
+growth somewhere in between the IPTG- and the Rha-/IPTG+ samples, as the
+inhibition of the T7 polymerase would have limited the overexpression of HS,
+allowing the cell to continue growing to some extent.
 
 Possible explanations are that either too much Rhamnose was added, such that
-the inhibition of the T7 polymerase was too strong, or that no or too little
+the inhibition of the T7 polymerase was too strong, or that none or too little
 IPTG had been added. The subsequent analysis of the protein expression using
-fluorescence seems to promote the later.
+fluorescence in section \ref{sec:fluorescence} seems to promote the later.
 
 \subsubsection{Medium comparison}
 
@@ -641,6 +648,11 @@ same speed. No conclusion can be reached as far as the final cell density is
 concerned, as cells did not reach their stationary phase yet.
 
 \subsection{Protein expression}
+\label{sec:fluorescence}
+
+All references to data in this section refer to figure
+\ref{fig:expression_fluorescence} and table \ref{tbl:expression_fluorescence}
+respectively.
 
 \subsubsection{Rha-/IPTG+}
 
@@ -663,6 +675,9 @@ Lastly the ZYM-505 medium increased, without promoting general cell growth
 unlike the TB medium, the fluorescence of the Rha-/IPTG+ sample. This implies
 that, while the number of cells stayed comparable to the LB medium, the number
 of HS proteins proteins per cell has increased.
+
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document}
 
