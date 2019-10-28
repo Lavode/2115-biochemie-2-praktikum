@@ -43,12 +43,13 @@ absorption = absorption_base %>%
   select(protein, state, avg_absorption_base, avg_absorption_quinone, avg_absorption_reduced) %>%
   mutate(relative_reduction = (avg_absorption_quinone - avg_absorption_base) / (avg_absorption_reduced - avg_absorption_base))
 absorption
+write.csv(absorption, '../data/reduction_quinol.csv', row.names = FALSE)
 
 ggplot(df_full, aes(x = time, y = absorption, color = series)) +
   geom_point(size = 0.1) +
   geom_line() +
   facet_wrap(vars(protein), ncol = 1) +
-  ylim(0, 0.4) +
-  labs(title = "", x = "", y = "") +
+  coord_cartesian(ylim=c(0, 0.4)) +
+  labs(title = "Reduction of HS under quinone addition", x = "Time [min]", y = "Absorption at 428nm") +
   theme_minimal() +
   ggsave('../img/reduction_quinol.png', width = 20, units = 'cm', dpi = 'print')
