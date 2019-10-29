@@ -53,3 +53,12 @@ ggplot(df_full, aes(x = time, y = absorption, color = series)) +
   labs(title = "Reduction of HS under quinone addition", x = "Time [min]", y = "Absorption at 428nm") +
   theme_minimal() +
   ggsave('../img/reduction_quinol.png', width = 20, units = 'cm', dpi = 'print')
+
+df_reduction = read.csv('../data/reduction_quinol.csv')
+ggplot(df_reduction, aes(x = protein, y = relative_reduction, fill = state)) +
+  geom_col(position = position_dodge()) +
+  scale_y_continuous(labels = scales::percent) +
+  labs(title = "Relative reduction of HS under quinone addition", x = "Sample", y = "Reduction [%]") +
+  theme_minimal() +
+  ggsave('../img/reduction_quinol_relative.png', width = 20, units = 'cm', dpi = 'print')
+

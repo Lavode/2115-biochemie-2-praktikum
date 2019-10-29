@@ -57,3 +57,21 @@ ggplot(df_full, aes(x = time, y = absorption, color = series)) +
   labs(title = "Reduction of HS under superoxide addition", x = "Time [min]", y = "Absorption at 428nm") +
     theme_minimal() +
   ggsave('../img/reduction_superox.png', width = 20, units = 'cm', dpi = 'print')
+
+
+df_reduction = read.csv('../data/reduction_superox.csv')
+# Custom facet labels
+sod.labs <- c("+SOD", "-SOD")
+names(sod.labs) <- c(TRUE, FALSE)
+
+ggplot(df_reduction, aes(x = protein, y = relative_reduction, fill = state)) +
+  geom_col(position = position_dodge()) +
+  scale_y_continuous(labels = scales::percent) +
+  facet_wrap(
+    vars(sod),
+    labeller = labeller(sod=sod.labs)
+  ) +
+  labs(title = "Relative reduction of HS under superoxide addition", x = "Sample", y = "Reduction [%]") +
+  theme_minimal() +
+  ggsave('../img/reduction_superox_relative.png', width = 20, units = 'cm', dpi = 'print')
+
