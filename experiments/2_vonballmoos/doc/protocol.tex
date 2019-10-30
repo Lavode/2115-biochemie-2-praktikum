@@ -22,6 +22,9 @@
 % Makes PDF viewers show the page rotated by 90°.
 \usepackage{pdflscape}
 
+% Subfigures
+\usepackage{subcaption}
+
 % Advanced tables
 \usepackage{tabu}
 \usepackage{longtable}
@@ -88,6 +91,7 @@
 
 \subject{\mysubject{}}
 \title{\mytitle{}}
+\subtitle{Weeks 2 \& 3}
 
 \author{Michael Senn \maillink{michael.senn@students.unibe.ch} - 16-126-880}
 
@@ -97,19 +101,19 @@
 % another. 
 \usepackage{hyperref}
 
-\includeonly{inc/week_23_procedure}
-
 
 \begin{document}
 \maketitle
 
-\include{inc/week_1_procedure}
+%\include{inc/week_1_procedure}
 
 \include{inc/week_23_procedure}
 
-\include{inc/week_1_results}
+%\include{inc/week_1_results}
 
-\include{inc/week_1_discussion}
+%\include{inc/week_1_discussion}
+
+\include{inc/week_23_results_discussion}
 
 \bibliographystyle{plain}
 \bibliography{references}

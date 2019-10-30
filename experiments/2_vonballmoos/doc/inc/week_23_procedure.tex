@@ -1,4 +1,4 @@
-\chapter{Procedure week 2 \& 3}
+\chapter{Procedure}
 
 \section{Purification}
 
@@ -240,4 +240,242 @@ purification (this can only be done for cybB561-dsred).
 	\label{tbl:sds_samples}
 \end{table}
 
+\section{Enzyme characterization}
 
+After expression and purification, it is time to characterize the different
+cybB561 enzymes. From this moment, you will keep your team, but you will work
+with all of the enzymes.  Since preparation of liposomes takes time, we
+prepared lipids for you as following:  
+\begin{itemize}
+	\item Put \SI{250}{\ul} of E. coli polar extract (ECPE)
+		\SI{20}{\mg\per\ml} dissolved already in chloroform in a
+		round-bottom flask. 
+	\item Chloroform was evaporated and lipids were dried ON in a
+		desiccator.
+\end{itemize}
+
+\subsection{Liposomes preparation}
+
+\begin{itemize}
+	\item \SI{20}{\milli\Molar} HEPES pH7.4, \SI{20}{\milli\Molar}
+		\ce{KCl}, \SI{200}{\milli\Molar} \ce{NaCl} buffer was reused of
+		the previous group.
+	\item Resuspend dried lipids with \SI{2}{\ml} of buffer (final
+		concentration of lipids = \SI{5}{\mg\per\ml}).
+	\item Unilamellar liposomes were formed by 7 freeze-thaw cycles in
+		liquid nitrogen and at \SI{29.4}{\celsius}, respectively.
+	\item Sonicate liposomes on ice in Vibra-Cell VCX sonicator as
+		following: 1 cycle of \SI{2.5}{\min} (\SI{30}{\s} on,
+		\SI{30}{\s} off) Amplitude \SI{40}{\percent} Keep sonicated
+		liposomes on ice till measurements.
+\end{itemize}
+
+\subsection{Reconstitution of enzymes into liposomes}
+
+\begin{itemize}
+	\item Prepare samples as shown in table \ref{tbl:hs_reconstitution}
+	\item Incubate at RT for \SI{30}{\min}
+	\item Equilibrate P10 column by washing with \SI{15}{\ml} \SI{10}{\milli\Molar} HEPES buffer
+	\item Complete sample to \SI{1}{\ml} with \SI{600}{\ul} buffer
+	\item Load sample on column, collect flowthrough.
+	\item Elute with \SI{1.5}{\ml} buffer, keep flowthrough.
+	\item Wash column with \SI{20}{\ml} dd\ce{H2O}
+	\item Ultracentrifuge samples at \SI{200000}{G} for \SI{2}{\hour}. Pellet was red, supernatant clear.
+	\item Discard supernatant
+	\item Resuspend pellet in \SI{100}{\ul} buffer
+\end{itemize}
+
+\section{Activity measurements}
+
+\subsection{Relative enzyme reduction}
+
+\begin{itemize}
+	\item Prepare \SI{50}{\ml} of buffer with \SI{20}{\milli\Molar} HEPES,
+		\SI{20}{\milli\Molar} \ce{KCl}, \SI{200}{\milli\Molar}
+		\ce{NaCl}, \SI{0.1}{\milli\Molar} HXP, \SI{0.1}{\milli\Molar}
+		DPTA
+	\item Buffers were used as-is for solubilized enzymes, and with \SI{0.05}{\percent} DDM for reconstituted enzymes.
+	\item Prepare samples according to table \ref{tbl:relative_reduction}
+	\item Follow reduction of SOO at \SI{428}{\nm} as follows:
+		\begin{itemize}
+			\item Add buffer and enzyme
+			\item Measure absorption
+			\item After \SI{1}{\min} add substrate (XO or quinol, optionally with SOD)
+			\item After \SI{3}{\min} add spatula tip DTT
+			\item Measure absorption until \SI{4}{\min}
+		\end{itemize}
+	\item Samples as in table \ref{tbl:relative_reduction_samples} were measured.
+\end{itemize}
+
+\subsection{TEV cleavage of Cyb-Dsred reconstituted into liposomes}
+
+\begin{itemize}
+	\item Mix:
+		\begin{itemize}
+			\item \SI{400}{\ul} of reconstituted liposomes 
+			\item \SI{200}{\ul} TEV protease (\SI{1}{\mg\per\ml})
+			\item \SI{10}{\ml} of buffer \SI{20}{\milli\Molar}
+				HEPES pH7.4, \SI{20}{\milli\Molar} \ce{KCl},
+				\SI{200}{\milli\Molar} \ce{NaCl}
+		\end{itemize}
+	\item Incubation at \SI{4}{\celsius} ON on a rotating disc
+	\item Same mixture prepared a second time, with \SI{200}{\ul} buffer in
+		place of TEV protease.
+\end{itemize}
+
+\subsection{Fluorescence measurements and comparison before and after cleavage}
+
+Liposomes were prepared for fluorescence measurements as follows:
+
+\begin{itemize}
+	\item Ultracentrifuge the reaction mixture at \SI{100000}{g} for \SI{1}{\hour}
+    	\item Discard supernatant (containing Tev protease and cleaved free dsred)
+	\item Resuspend the pellet with \SI{400}{\ul} of \SI{20}{\milli\Molar}
+		HEPES pH7.4, \SI{20}{\milli\Molar} \ce{KCl},
+		\SI{200}{\milli\Molar} \ce{NaCl}
+    	\item Store liposomes on ice for further utilization.
+	\item Maximum excitation and emission were determined using scan.
+		\begin{itemize}
+			\item Max excitation: \SI{555}{\nm}
+			\item Max emission at \SI{555}{\nm}: \SI{595}{\nm}
+		\end{itemize}
+	\item Emission at \SI{555}{\nm} measured as follows:
+		\begin{itemize}
+			\item Buffer and sample added
+			\item \SI{1}{\ul} \SI{1}{\Molar} copper solution added
+			\item \SI{15}{\ul} \SI{0.5}{\Molar} EDTA added
+			\item Emission measured after each step
+		\end{itemize}
+	\item These three measurements were done for:
+		\begin{itemize}
+			\item \SI{5}{\ul} solubilized dsRed, \SI{745}{\ul} buffer
+			\item \SI{100}{\ul} uncleaved reconstituted dsRed, \SI{650}{\ul} buffer
+			\item \SI{100}{\ul} cleaved reconstituted dsRed, \SI{650}{\ul} buffer
+			\item \SI{200}{\ul} uncleaved reconstituted dsRed, \SI{550}{\ul} buffer
+			\item \SI{200}{\ul} cleaved reconstituted dsRed, \SI{550}{\ul} buffer
+		\end{itemize}
+\end{itemize}
+
+\subsection{Activity measurements}
+
+In the final part of the experiment the activity of solubilized SOO was
+measured in presence of both substrates - superoxide produced from hypoxanthine
+by XO, and quinone which was kept from running out by adding BO3 oxidase.
+
+\begin{itemize}
+	\item An assay buffer was prepared:
+		\begin{itemize}
+			\item \SI{50}{\ml} sodium phosphate pH8 \SI{100}{\milli\Molar}
+			\item \SI{0.1}{\milli\Molar} DTPA
+			\item \SI{0.1}{\milli\Molar} Hypoxanthine
+			\item \SI{0.05}{\percent} DDM
+			\item \SI{50}{\ul} WST-1 \SI{10}{\milli\Molar}
+			\item \SI{50}{\ul} catalase \SI{2}{\mg\per\ml}
+		\end{itemize}
+
+	\item Two types of measurement were then performed, each one as follows:
+		\begin{itemize}
+			\item Added buffer for a final volume of \SI{750}{\ul}
+			\item Added varying amount of Q2
+			\item Added \SI{60}{\nano\Molar} BO3 oxidase
+			\item Measurement of WST-1 reduction at \SI{455}{\nm} was started
+			\item After \SI{0.5}{\min} \SI{0.03}{U} XO were added
+			\item After \SI{1.5}{\min} a varying amount of SOO was added.
+		\end{itemize}
+
+	\item In the first series the quinone concentration was kept constant
+		at \SI{100}{\micro\Molar}, and the SOO concentration was varied
+		until a concentration was found where SOO was able to quench
+		the reduction of WST-1 as well as a control series where SOD
+		was added.
+	\item For the mutant, measurements were done for the following SOO
+		volumes:
+		\begin{itemize}
+			\item Reference XO, no SOO
+			\item Reference XO \& SOD, no SOO
+			\item \SI{0.5}{\ul} HS mt
+			\item \SI{1}{\ul} HS mt
+			\item \SI{2}{\ul} HS mt
+			\item \SI{5}{\ul} HS mt
+			\item \SI{7}{\ul} HS mt
+			\item \SI{9}{\ul} HS mt
+		\end{itemize}
+	\item And the following volumes for the wild type:
+		\begin{itemize}
+			\item Reference XO, no SOO
+			\item Reference XO \& SOD, no SOO
+			\item \SI{0.25}{\ul} HS mt
+			\item \SI{0.5}{\ul} HS mt
+			\item \SI{1}{\ul} HS mt
+		\end{itemize}
+	\item In the second series the above determined volumes of SOO of
+		\SI{9}{\ul} for the mutant, \SI{1}{\ul} for the wild type were
+		kept constant, while the Q2 concentration was varied until well
+		within the realm where the reaction was substrate-limited.
+	\item The following measurements were done for the mutant:
+		\begin{itemize}
+			\item \SI{50}{\micro\Molar} Q2
+			\item \SI{20}{\micro\Molar} Q2
+			\item \SI{10}{\micro\Molar} Q2
+			\item \SI{5}{\micro\Molar} Q2
+			\item \SI{2}{\micro\Molar} Q2
+			\item \SI{0.5}{\micro\Molar} Q2
+			\item \SI{0.25}{\micro\Molar} Q2
+		\end{itemize}
+	\item And for the wild type:
+		\begin{itemize}
+			\item \SI{25}{\micro\Molar} Q2
+			\item \SI{10}{\micro\Molar} Q2
+			\item \SI{5}{\micro\Molar} Q2
+			\item \SI{1}{\micro\Molar} Q2
+			\item \SI{0.2}{\micro\Molar} Q2
+			\item \SI{0.1}{\micro\Molar} Q2
+			\item \SI{0.05}{\micro\Molar} Q2
+			\item \SI{0.01}{\micro\Molar} Q2
+		\end{itemize}
+\end{itemize}
+
+\begin{table}
+	\centering
+	\begin{tabu}{llll}
+		\toprule
+		Sample & Enzyme & Sodium cholate \SI{10}{\percent} & Liposomes \\
+		\midrule
+		dsRed & \SI{60}{\ul} dsRed & \SI{60}{\ul} & \SI{880}{\ul} \\
+		mut & \SI{40}{\ul} mut & \SI{24}{\ul} & \SI{336}{\ul} \\
+		wt & \SI{40}{\ul} wt & \SI{24}{\ul} & \SI{336}{\ul} \\
+		blank & \SI{150}{\ul} buffer \SI{20}{\milli\Molar} HEPES & & \SI{250}{\ul} \\
+		\bottomrule
+	\end{tabu}
+	\caption{Reconstitution of enzymes into liposomes}
+	\label{tbl:hs_reconstitution}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabu}{lllll}
+		\toprule
+		Measurement & Enzyme & Substrate & Addition & Buffer \\
+		\midrule
+		1 & \SI{2}{\ul} wt solubilized & \SI{1}{\ul} XO & - & \SI{747}{\ul} \\
+		2 & \SI{2}{\ul} wt solubilized & \SI{1}{\ul} XO & \SI{1}{\ul} SOD & \SI{746}{\ul} \\
+		3 & \SI{2.2}{\ul} mut solubilized & \SI{1}{\ul} XO & - & \SI{746.8}{\ul} \\
+		4 & \SI{2.2}{\ul} mut solubilized & \SI{1}{\ul} XO & \SI{1}{\ul} SOD & \SI{745.8}{\ul} \\
+		5 & - (neg control) & \SI{1}{\ul} XO & - & \SI{749.0}{\ul} \\
+		6 & \SI{10}{\ul} wt reconstituted & \SI{1}{\ul} XO & - & \SI{739}{\ul} \\
+		7 & \SI{10}{\ul} wt reconstituted & \SI{1}{\ul} XO & \SI{1}{\ul} SOD & \SI{738}{\ul} \\
+		8 & \SI{10}{\ul} mutt reconstituted & \SI{1}{\ul} XO & - & \SI{739}{\ul} \\
+		9 & \SI{10}{\ul} mut reconstituted & \SI{1}{\ul} XO & \SI{1}{\ul} SOD & \SI{738}{\ul} \\
+		10 & \SI{10}{\ul} pure liposomes & \SI{1}{\ul} XO & - & \SI{749}{\ul} \\
+
+		11 & \SI{2}{\ul} wt solubilized & \SI{1}{\ul} quinol & - & \SI{747}{\ul} \\
+		12 & \SI{2}{\ul} mut solubilized & \SI{1}{\ul} quinol & - & \SI{747}{\ul} \\
+		13 & - (neg control) & \SI{1}{\ul} quinol & - & \SI{749}{\ul} \\
+		14 & \SI{10}{\ul} wt reconstituted & \SI{1}{\ul} quinol & - & \SI{739}{\ul} \\
+		15 & \SI{10}{\ul} mut reconstituted & \SI{1}{\ul} quinol & - & \SI{739}{\ul} \\
+		16 & \SI{10}{\ul} pure liposomes & \SI{1}{\ul} quinol & - & \SI{739}{\ul} \\
+		\bottomrule
+	\end{tabu}
+	\caption{Samples for measuring relative reduction}
+	\label{tbl:relative_reduction_samples}
+\end{table}

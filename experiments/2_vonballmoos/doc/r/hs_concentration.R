@@ -27,16 +27,16 @@ baseline_correction = df_full %>%
   group_by(protein, state) %>% 
   summarize(n(), mean_absorption = mean(absorption)) %>%
   group_by(protein) %>% 
-  summarize(baseline_correction = max(mean_absorption) - min(mean_absorption))
+  summarize(baseline_correction = round(max(mean_absorption) - min(mean_absorption), 3))
 baseline_correction
 
 concentrations = df_full %>%
   filter(between(wavelength, 561, 561.1)) %>%
   group_by(protein) %>%
-  summarize(absorption_delta = max(absorption) - min(absorption)) %>%
+  summarize(absorption_delta = round(max(absorption) - min(absorption), 3)) %>%
   left_join(baseline_correction, by="protein") %>%
-  mutate(absorption_delta_corrected = absorption_delta + baseline_correction) %>%
-  mutate(concentration = absorption_delta_corrected / extinction_factor * dilution_factor)
+  mutate(absorption_delta_corrected = round(absorption_delta + baseline_correction, 3)) %>%
+  mutate(concentration = round(absorption_delta_corrected / extinction_factor * dilution_factor, 3))
 concentrations
 write.csv(concentrations, '../data/hs_concentration.csv', row.names = FALSE)
 

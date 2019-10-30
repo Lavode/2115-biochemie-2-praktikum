@@ -1,4 +1,4 @@
-"protein","absorption_delta","baseline_correction","absorption_delta_corrected","concentration"
-"dsred",0.06777696313,0.012640603724,0.080417566854,0.650487221101165
-"mutant",0.04256657511,0.00598479504775,0.04855137015775,0.392725707703974
-"wildtype",0.04189462588,0.004183109151,0.046077735031,0.372716795440574
+protein,absorption_delta,baseline_correction,absorption_delta_corrected,concentration
+dsred,0.068,0.013,0.081,0.655
+mutant,0.043,0.006,0.049,0.396
+wildtype,0.042,0.004,0.046,0.372
