@@ -1,1 +1,243 @@
 \chapter{Procedure week 2 \& 3}
+
+\section{Purification}
+
+\subsection{Memrane solubilization}
+
+\begin{itemize}
+	\item Thaw membranes (\SI{10}{\mg\per\ml}) that you prepared on the
+		first day.
+	\item Create \SI{11}{\ml} dilution according to table
+		\ref{tbl:membrane_dilution}
+	\item Incubate mixture at \SI{4}{\celsius} for \SI{1}{\hour} while
+		stirring slowly.
+	\item During solubilisation, prepare buffers used for purification.
+	\item Pellet the insolubilized membrane by ultracentrifugation at
+		\SI{150000}{G} (Ti60-Rotor: 46000rpm) for \SI{45}{\min} at
+		\SI{4}{\celsius}.
+	\item Prepare HEPES wash buffer according to table
+		\ref{tbl:hepes_buffer_no_ogng}, adjust pH to 7. Split in two
+		\SI{250}{\ml} flasks, add \SI{10}{\percent} OGNG to one.
+	\item Load \SI{2}{\ml} of Profinity beads on the column.
+	\item Once ethanol is removed, add \SI{10}{\ml} (10 column volumes) of
+		\SI{50}{\milli\Molar} Sodium acetate pH4,
+		\SI{300}{\milli\Molar} \ce{NaCl}.
+	\item Load \SI{10}{\ml} of \SI{0.2}{\Molar} Nickel (10 column volumes) 
+	\item Wash the column with \SI{10}{\ml} (10 column volumes) of
+		\SI{50}{\milli\Molar} Sodium acetate pH4,
+		\SI{300}{\milli\Molar} \ce{NaCl}.
+	\item Wash the column with \SI{15}{\ml} of MQ water
+	\item Equilibrate the resin with \SI{15}{\ml} of wash buffer
+		(\SI{10}{\milli\Molar} HEPES pH 7, \SI{200}{\milli\Molar}
+		\ce{NaCl}, \SI{5}{\percent} glycerol and \SI{0.1}{\percent}
+		OGNG. The Ni-beads are now ready to use.
+\end{itemize}
+
+\subsection{Protein purification}
+
+\begin{itemize}
+	\item Prepare \SI{40}{\ml} wash buffer with \SI{5}{\milli\Molar}
+		Histidine, and \SI{80}{\ml} wash buffer with
+		\SI{100}{\milli\Molar} Histidine.
+	\item Mix the supernatant with Ni-beads and incubate for \SI{45}{\min}
+		at \SI{4}{\celsius} on a rotating wheel.
+	\item Load the slurry on the column and collect the flowthrough
+		(unbound proteins).
+	\item Let flowthrough pass through resin 1 more time in order to bind
+		remaining His-tagged protein. Keep an aliquot of \SI{12}{\ul}
+		on ice. For cybB561-dsred, keep \SI{30}{\ul}.
+	\item Wash the column with \SI{10}{\ml} (10 column volumes) of wash
+		buffer containing OGNG. Keep an aliquot of \SI{12}{\ul} on ice.
+		For cybB561-dsred, keep \SI{30}{\ul}.
+	\item Wash the column with \SI{10}{\ml} (10 column volumes) of wash
+		buffer \SI{5}{\milli\Molar} Histidine. Keep an aliquot of
+		\SI{12}{\ul} on ice. For cybB561-dsred, keep \SI{30}{\ul}. Why
+		do we wash with \SI{5}{\milli\Molar} histidine?
+	\item Elute the column with \SI{20}{\ml} wash buffer +
+		\SI{100}{\milli\Molar} Histidine. Keep an aliquot of
+		\SI{12}{\ul} on ice. For cybB561-dsred, keep \SI{30}{\ul}.
+	\item Concentrate the eluate with an Amicon \SI{10}{\kilo\Da} MWCO
+		centrifugal concentrator to \SI{0.5}{\ml} (volume needed to
+		inject on the size exclusion chromatography column S200
+		increase).
+\end{itemize}
+
+
+Only for cybB561-Dsred protein, we will try to separate CybB561 and Dsred in
+presence of TEV protease.
+
+\begin{itemize}
+	\item take \SI{100}{\ul} of the concentrated CybB561-Dsred and dilute
+		it in \SI{10}{\ml} of \SI{10}{\milli\Molar} HEPES pH7,
+		\SI{200}{\milli\Molar} \ce{NaCl}, \SI{5}{\percent} glycerol,
+		\SI{0.1}{\percent} OGNG.
+	\item Add \SI{200}{\ul} of TEV protease (\SI{1}{\mg\per\ml},
+		M=\SI{25}{\kilo\Da}, final concentration =
+		\SI{0.8}{\micro\Molar})
+	\item Incubate overnight at \SI{4}{\celsius} and mix with magnetic
+		stirrer.
+\end{itemize}
+
+
+
+\subsection{Size exclusion chromatography}
+
+After purification of protein of interest using affinity chromatography, you will purify the concentrated protein again using size exclusion chromatography (gel filtration). What is the reason behind this additional step?
+
+\begin{itemize}
+	\item S200 column equilibrated overnight using wash buffer with OGNG.
+	\item Fill the loop (\SI{0.5}{\ml}) on the ÄKTA pure device with the
+		concentrated samples (\SI{0.5}{\ml}).
+	\item Start the run. Note that fractions of eluted proteins will be
+		collected automatically.
+	\item Pool together fractions that you suspect to contain the protein
+		of interest.
+	\item Concentrate with an Amicon \SI{10}{\kilo\Da} MWCO centrifugal
+		concentrator (final volume that can be reached is
+		\SI{250}{\ul}).
+\end{itemize}
+
+\subsection{Reverse IMAC}
+
+While running a gel filtration, you will do a reverse IMAC with cybB561.Dsred
+cleaved overnight using TEV protease as follows:
+
+\begin{itemize}
+	\item First, take a sample of \SI{30}{\ul}, keep on ice.
+	\item Load the mixture on the column (containing pre-equilibrated resin
+		charged again with nickel).
+	\item Retain the flow-through. Keep an aliquot of \SI{30}{\ul} on ice.
+		Flowthrough was kept as it contained the cleaved HS. The
+		flowthrough was light red, the beads not red.
+	\item Load elution buffer on the column (the same that you used a day
+		before). Keep an aliquot of \SI{30}{\ul} on ice. The elution
+		was pink.
+\end{itemize}
+
+\subsection{Protein concentration determination}
+
+To determine the concentration of the different purified proteins, we will take
+advantage of the absorbance of the 2 hemes that are buried inside the protein.
+
+\begin{itemize}
+	\item A buffer \SI{20}{\milli\Molar} HEPES pH7.4, \SI{20}{\milli\Molar}
+		\ce{KCl} \SI{200}{\milli\Molar} \ce{NaCl}, \SI{0.05}{\percent}
+		DDM was prepared.
+	\item A cuvette was filled with \SI{748}{\ul} buffer and the baseline measured by scanning between \SI{600}{\nm} and \SI{400}{\nm}.
+	\item \SI{2}{\ul} of protein were added and measured again.
+	\item A small amount of sodium dithionite was added to fully reduce the
+		protein, and another measurement done.
+	\item The original protein concentration was calculated using the
+		dilution factor, baseline-compensanted \SI{561}{\nm} absorbance
+		difference of oxidized and reduced form, path length of
+		\SI{1}{\c} and and extinction coefficient of
+		\SI{46.36}{\per\milli\Molar\per\cm}.
+	\item Proteins were frozen in liquid nitrogen in small droplets, and
+		stored at \SI{-80}{\celsius}.
+\end{itemize}
+
+\subsection{SDS-PAGE}
+
+\begin{itemize}
+	\item Two gels were prepared according to the recipe (\SI{12}{\percent}).
+	\item Samples were prepared according to table \ref{tbl:sds_samples}.
+	\item Samples were incubated for \SI{30}{\min} at \SI{40}{\celsius}
+	\item \SI{10}{\ul} of sample were loaded per lane, with \SI{5}{\ul} ruler in empty lanes.
+	\item The gel was run for \SI{20}{\min} at \SI{125}{\V}, followed by \SI{80}{\min} at \SI{185}{\V}.
+	\item The gel was coomassie-stained, and cleaned overnight.
+\end{itemize}
+
+
+\subsection{Fluorescence measurements}
+
+The efficiency of each purification step can be determined by the measurement
+of fluorescence of the different samples that were taken in different steps of
+purification (this can only be done for cybB561-dsred).
+
+\begin{itemize}
+	\item \SI{15}{\ul} of each sample were diluted to \SI{200}{\ul} with
+		dd\ce{H2O}.
+	\item Diluated samples were loaded onto a 96-well plate.
+	\item Fluorescence was measured at an emission of \SI{586}{\nm},
+		extinction of \SI{555}{\nm}
+\end{itemize}
+
+\begin{table}
+	\centering
+	\begin{tabu}{llll}
+		\toprule
+		Component & Stock & Final concentration & Used amount \\
+		\midrule
+		H158F & \SI{20}{\mg\per\ml} & \SI{10}{\mg\per\ml} & \SI{5.5}{\ml} \\
+		OGNG & \SI{9}{\percent} & \SI{1}{\percent} & \SI{12}{\ml} \\
+		Glycerol & \SI{85}{\percent} & \SI{5}{\percent} & \SI{0.647}{\ml} \\
+		PMSF & \SI{1}{\milli\Molar} & \SI{200}{\milli\Molar} & \SI{55}{\ul} \\
+		PEF block & & & some crystals \\
+		HEPES Buffer & & & \SI{3.598}{\ml} \\
+		\bottomrule
+	\end{tabu}
+	\caption{\SI{11}{\ml} Membrane dilution}
+	\label{tbl:membrane_dilution}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabu}{llll}
+		\toprule
+		Component & Stock & Final concentration & Used amount \\
+		\midrule
+		HEPES & \SI{1}{\Molar} & \SI{10}{\milli\Molar} & \SI{5}{\ml} \\
+		\ce{NaCl} & \SI{2}{\Molar} & \SI{200}{\milli\Molar} & \SI{50}{\ml} \\
+		Glycerol & \SI{85}{\percent} & \SI{5}{\percent} & \SI{29.4}{\ml} \\
+		PMSF & \SI{1}{\milli\Molar} & \SI{200}{\milli\Molar} & \SI{55}{\ul} \\
+		dd \ce{H2O} & & & \SI{410.05}{\ml} \\
+		\bottomrule
+	\end{tabu}
+	\caption{\SI{50}{\ml} wash buffer}
+	\label{tbl:hepes_buffer_no_ogng}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabu}{llllll}
+		\toprule
+		Gel & Lane & Sample & Protein & Buffer & dd\ce{H2O} \\
+		\midrule
+		1 & 1 & Ladder & \SI{5}{\ul} & - & - \\
+		1 & 2 & wt Flowthrough & \SI{3}{\ul} & \SI{3}{\ul} & \SI{9}{\ul} \\
+		1 & 3 & wt Wash & \SI{12}{\ul} & \SI{3}{\ul} & \SI{0}{\ul} \\
+		1 & 4 & wt Wash \SI{5}{\milli\Molar} His & \SI{12}{\ul} & \SI{3}{\ul} & \SI{0}{\ul} \\
+		1 & 5 & wt before ÄKTA (conc) & \SI{1}{\ul} & \SI{3}{\ul} & \SI{11}{\ul} \\
+		1 & 6 & wt after ÄKTA (conc) & \SI{0.5}{\ul} & \SI{3}{\ul} & \SI{11.5}{\ul} \\
+
+		1 & 7 & Ladder & \SI{5}{\ul} & - & - \\
+		1 & 8 & mt Flowthrough & \SI{3}{\ul} & \SI{3}{\ul} & \SI{9}{\ul} \\
+		1 & 9 & mt Wash & \SI{12}{\ul} & \SI{3}{\ul} & \SI{0}{\ul} \\
+		1 & 10 & mt Wash \SI{5}{\milli\Molar} His & \SI{12}{\ul} & \SI{3}{\ul} & \SI{0}{\ul} \\
+		1 & 11 & mt before ÄKTA (conc) & \SI{1}{\ul} & \SI{3}{\ul} & \SI{11}{\ul} \\
+		1 & 12 & mt after ÄKTA (conc) & \SI{0.5}{\ul} & \SI{3}{\ul} & \SI{11.5}{\ul} \\
+		1 & 13 & & & & \\
+		1 & 14 & Used by assistant & & & \\
+
+
+		2 & 1 & Ladder & \SI{5}{\ul} & - & - \\
+		2 & 2 & dsRed Flowthrough & \SI{3}{\ul} & \SI{3}{\ul} & \SI{9}{\ul} \\
+		2 & 3 & dsRed Wash & \SI{12}{\ul} & \SI{3}{\ul} & \SI{0}{\ul} \\
+		2 & 4 & dsRed Wash \SI{5}{\milli\Molar} His & \SI{12}{\ul} & \SI{3}{\ul} & \SI{0}{\ul} \\
+		2 & 5 & dsRed before ÄKTA (conc) & \SI{1}{\ul} & \SI{3}{\ul} & \SI{11}{\ul} \\
+		2 & 6 & dsRed after ÄKTA (conc) & \SI{0.5}{\ul} & \SI{3}{\ul} & \SI{11.5}{\ul} \\
+		2 & 7 & dsRed flowthrough (conc) & \SI{1}{\ul} & \SI{3}{\ul} & \SI{11}{\ul} \\
+		2 & 8 & dsRed before ÄKTA (conc) & \SI{1}{\ul} & \SI{3}{\ul} & \SI{11}{\ul} \\
+		2 & 9 & dsRed cleaved before loading & \SI{12}{\ul} & \SI{3}{\ul} & \SI{0}{\ul} \\
+		2 & 10 & dsRed cleaved flowthrough & \SI{12}{\ul} & \SI{3}{\ul} & \SI{0}{\ul} \\
+		2 & 11 & dsRed cleaved elution & \SI{12}{\ul} & \SI{3}{\ul} & \SI{0}{\ul} \\
+		2 & 12 & TEV & \SI{2}{\ul} & \SI{3}{\ul} & \SI{10}{\ul} \\
+		2 & 13 & wt after ÄKTA & \SI{0.5}{\ul} & \SI{3}{\ul} & \SI{11.5}{\ul} \\
+		2 & 14 & dsRed & \SI{8}{\ul} & \SI{3}{\ul} & \SI{4}{\ul} \\
+		\bottomrule
+	\end{tabu}
+	\caption{SDS-PAGE samples}
+	\label{tbl:sds_samples}
+\end{table}
+
+
