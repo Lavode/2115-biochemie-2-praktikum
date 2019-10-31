@@ -38,7 +38,7 @@ concentrations = df_full %>%
   mutate(absorption_delta_corrected = round(absorption_delta + baseline_correction, 3)) %>%
   mutate(concentration = round(absorption_delta_corrected / extinction_factor * dilution_factor, 3))
 concentrations
-write.csv(concentrations, '../data/hs_concentration.csv', row.names = FALSE)
+write.csv(concentrations, '../data/hs_concentration.csv', row.names = FALSE, quote=FALSE)
 
 ggplot(df_full, aes(x = wavelength, y = absorption, color = state)) +
   geom_point(size = 0.1) +

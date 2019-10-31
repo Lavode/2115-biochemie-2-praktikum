@@ -50,7 +50,7 @@ ggplot(df_slopes, aes(x = concentration, y = relative_reduction)) +
   geom_point() +
   geom_line() +
   #coord_cartesian(ylim=c(0, 0.4)) +
-  labs(title = "Determination of HS KM", subtitle = 'Mutant', x = "Concentration [uM]", y = "Relative superoxide reduction [%]") +
+  labs(title = "Determination of HS KM", subtitle = 'Mutant', x = "Concentration [uM]", y = "Relative superoxide oxidation [%]") +
   theme_minimal() +
   ggsave('../img/activity_mut_km.png', width = 20, units = 'cm', dpi = 'print')
 
@@ -58,7 +58,7 @@ ggplot(df_slopes, aes(x = concentration_inverse, y = relative_reduction_inverse)
   geom_point() +
   geom_smooth(method = 'lm', se = FALSE) +
   stat_regline_equation(label.x = 3, label.y = 2) +
-  labs(title = "Determination of HS KM", subtitle = 'Mutant', x = "1 / concentration [1 / uM]", y = "1 / Relative superoxide reduction [1 / %]") +
+  labs(title = "Determination of HS KM", subtitle = 'Mutant', x = "1 / concentration [1 / uM]", y = "1 / Relative superoxide oxidation [1 / %]") +
   theme_minimal() +
   ggsave('../img/activity_mut_km_lb.png', width = 20, units = 'cm', dpi = 'print')
 
