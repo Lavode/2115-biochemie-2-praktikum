@@ -49,7 +49,7 @@ These metrics including the final concentration are shown in table
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/hs_concentration.png}
+	\includegraphics[width=0.8\textwidth]{img/hs_concentration.png}
 	\caption{Absorption of HS for concentration determination}
 	\label{fig:hs_concentration}
 \end{figure}
@@ -73,18 +73,18 @@ These metrics including the final concentration are shown in table
 
 The results of the SDS page gels are shown in figure \ref{fig:sds}.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.7\textwidth}
         \includegraphics[width=\textwidth]{img/sds_wt_mut}
         \caption{SDS PAGE gel of wildtype and mutant}
         \label{fig:sds_wt_mut}
     \end{subfigure}
-    ~
-    \begin{subfigure}{0.45\textwidth}
+
+    \begin{subfigure}{0.7\textwidth}
         \includegraphics[width=\textwidth]{img/sds_dsred_tev_cleavage.png}
         \caption{SDS PAGE gel of dsRed including cleaved dsRed}
-        \label{fig:sds_wt_mut}
+        \label{fig:sds_dsred_cleaved}
     \end{subfigure}
     \caption{SDS gels of three protein variants}
     \label{fig:sds}
@@ -93,7 +93,7 @@ The results of the SDS page gels are shown in figure \ref{fig:sds}.
 \section{Fluorescence measurements}
 
 The results of the fluorescence measurements for tracking losses during
-purification are shown in figur \ref{fig:purification_fluorescence}.
+purification are shown in figure \ref{fig:purification_fluorescence}.
 Fluorescence measurements were scaled to the volume the sample had at the time
 of the aliquot being stored. This allowed using the so-adjusted fluorescence
 value as an indicator of the amount of protein - rather than the concentration
@@ -101,7 +101,7 @@ of protein - which were present in the sample at the given stage.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/purification_fluorescence.png}
+	\includegraphics[width=0.8\textwidth]{img/purification_fluorescence.png}
 	\caption{Fluorescence measurements to track purification losses}
 	\label{fig:purification_fluorescence}
 \end{figure}
@@ -124,7 +124,7 @@ by quinol, are shown in table \ref{tbl:reduction_quinol}.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/reduction_quinol.png}
+	\includegraphics[width=0.8\textwidth]{img/reduction_quinol.png}
 	\caption{Absorbance of HS to track reduction due to quinol}
 	\label{fig:reduction_quinol}
 \end{figure}
@@ -199,7 +199,7 @@ The relative reductions by both, superoxide and quinol, are shown in figure
 	\label{fig:reduction_superox_relative}
     \end{subfigure}
     \caption{Relative reduction of HS by quinol and superoxide}
-    \label{fig:relative_reduction}
+    \label{fig:reduction_relative}
 \end{figure}
 
 \section{Fluorescence measurements before and after cleavage}
@@ -246,7 +246,7 @@ one sample is then given as:
 These relative oxidation values are shown in figure \ref{fig:activity_km}, as
 well as in a LB plot in figure \ref{fig:activity_km_lb}. A linear regression
 was performed on the values, which then allowed to calculate the following
-$K_m$ values.
+$K_m$ values in table \ref{tbl:activity_km}.
 
 \begin{table}
 	\centering
@@ -265,13 +265,13 @@ $K_m$ values.
 
 \begin{figure}
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.75\textwidth}
 	\includegraphics[width=\textwidth]{img/activity_mut_hs.png}
 	\caption{HS mutant}
 	\label{fig:activity_mut_hs}
     \end{subfigure}
-    ~
-    \begin{subfigure}{0.45\textwidth}
+
+    \begin{subfigure}{0.75\textwidth}
 	\includegraphics[width=\textwidth]{img/activity_wt_hs.png}
 	\caption{HS wildtype}
 	\label{fig:activity_wt_hs}
@@ -282,13 +282,13 @@ $K_m$ values.
 
 \begin{figure}
     \centering
-    \begin{subfigure}{0.9\textwidth}
+    \begin{subfigure}{0.75\textwidth}
 	\includegraphics[width=\textwidth]{img/activity_mut_quinone.png}
 	\caption{HS mutant}
 	\label{fig:activity_mut_quinone}
     \end{subfigure}
 
-    \begin{subfigure}{0.9\textwidth}
+    \begin{subfigure}{0.75\textwidth}
 	\includegraphics[width=\textwidth]{img/activity_wt_quinone.png}
 	\caption{HS wildtype}
 	\label{fig:activity_wt_quinone}
@@ -316,18 +316,18 @@ $K_m$ values.
 
 \begin{figure}
     \centering
-    \begin{subfigure}{0.9\textwidth}
+    \begin{subfigure}{0.45\textwidth}
 	\includegraphics[width=\textwidth]{img/activity_mut_km_lb.png}
 	\caption{HS mutant}
 	\label{fig:activity_mut_km_lb}
     \end{subfigure}
-
-    \begin{subfigure}{0.9\textwidth}
+    ~
+    \begin{subfigure}{0.45\textwidth}
 	\includegraphics[width=\textwidth]{img/activity_wt_km_lb.png}
 	\caption{HS wildtype}
 	\label{fig:activity_wt_km_lb}
     \end{subfigure}
-    \caption{Determination of $K_m$n}
+    \caption{Determination of $K_m$}
     \label{fig:activity_km_lb}
 \end{figure}
 
@@ -342,8 +342,8 @@ molecules which are smaller than SOO. Similarly impurities which are in earlier
 fractions are larger than SOO.
 
 This step allowed to further purify the protein, allowing to filter not only on
-the affinity to nickel beads as was done before, but in addition to filter
-based on the size of molecules.
+the affinity to His-tagged nickel beads as was done before, but in addition to
+filter based on the size of molecules.
 
 \section{Protein concentration determination}
 
@@ -371,7 +371,7 @@ been loaded above capacity.
 \subsubsection{Wash \SI{5}{\milli\Molar}}
 
 The \SI{5}{\milli\Molar} His wash allowed to wash out everything which was able
-to weakly bind to the column, without washing up the strongly bound SOO.
+to weakly bind to the column, without washing out the strongly bound SOO.
 Comparing the bands with the bands from later purification steps which are
 known to be SOO imply that a bit of SOO was washed out in this step.
 
@@ -442,14 +442,14 @@ during the affinity chromatography.
 \subsection{Reverse IMAC}
 
 The fluorescence of the elution and flowthrough stages confirms what was
-already seen in the SDS-PAGE gel - the majority of the fluorescence dsRed was
+already seen in the SDS-PAGE gel - the majority of the fluorescent dsRed was
 in the elution, so bound to the column. Only a small part was in the
 flowthrough, which might eg be dsRed which was washed out by the
 \SI{5}{\milli\Molar} His wash buffer.
 
 \section{Relative enzyme reduction}
 
-For both quinol and superoxide the negative control confirm that the change in
+For both quinol and superoxide the negative control confirms that the change in
 absorbance was caused by the reduction of HS, and not by something unrelated.
 In either case are the relative reductions of the wild type and mutant
 comparable, implying that the mutation does not have a direct effect on the
@@ -464,10 +464,11 @@ system.
 The data shows that the relative reduction of solubilized enzymes is
 significantly higher than those of reconstituted enzymes. This might imply that
 superoxide is unable to enter liposomes, such that in the case of liposomes it
-cannot reduce those HS enzymes whose active site is within the liposome. Under
-the assumption that this holds we can estimate, by comparing the relative
-reduction of reconstituted and solubilized enzymes, that about half the enzymes
-have one orientation, while the other half has another.
+cannot reduce those HS enzymes whose active site is within the liposome. Such
+an observation was also made in the one of the referenced papers \cite{soo}.
+Under the assumption that this holds we can estimate, by comparing the relative
+reduction of reconstituted and solubilized enzymes, that in liposomes about
+half the enzymes have one orientation, while the other half has another.
 
 \subsection{Quinol as substrate}
 
