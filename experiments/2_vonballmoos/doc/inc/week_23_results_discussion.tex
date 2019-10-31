@@ -225,6 +225,8 @@ able to quench the reduction of the dye as well as SOD. For the mutant this
 turned out to be a volume of \SI{9}{\ul} per cuvette, for the wild type a
 volume of \SI{1}{\ul}.
 
+\subsection{Determining $K_m$}
+
 Figure \ref{fig:activity_quinone} shows the absorption graphs when quinone
 concentration was gradually lowered. For each of the samples the slope after
 enzyme addition was determined. As a baseline the slope of the SOD sample after
@@ -240,6 +242,25 @@ one sample is then given as:
 \[
 	\text{oxidation}_{\text{Superoxide}} = 1 - \frac{s_{\text{sample}}}{s_{\text{XO}} - s_{\text{SOD}}}
 \]
+
+These relative oxidation values are shown in figure \ref{fig:activity_km}, as
+well as in a LB plot in figure \ref{fig:activity_km_lb}. A linear regression
+was performed on the values, which then allowed to calculate the following
+$K_m$ values.
+
+\begin{table}
+	\centering
+	\begin{tabu}{lllll}
+		\toprule
+		Protein & LB slope $a$ & LB y-intercept $b$ & $v_{\text{max}} = b^{-1}$ & $K_m = v_{\text{max}} \cdot a$ \\
+		\midrule
+		Wildtype & 0.0065 & 1.1 & \SI{90.9}{\percent} & \SI{0.0059}{\micro\Molar} \\
+		Mutant & 0.24 & 1.1 & \SI{90.9}{\percent} & \SI{0.218}{\micro\Molar} \\
+		\bottomrule
+	\end{tabu}
+	\caption{Determination of $K_m$ for HS}
+	\label{tbl:activity_km}
+\end{table}
 
 
 \begin{figure}
@@ -274,6 +295,40 @@ one sample is then given as:
     \end{subfigure}
     \caption{Determination of activity depending on Quinone concentration}
     \label{fig:activity_quinone}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+	\includegraphics[width=\textwidth]{img/activity_mut_km.png}
+	\caption{HS mutant}
+	\label{fig:activity_mut_km}
+    \end{subfigure}
+    ~
+    \begin{subfigure}{0.45\textwidth}
+	\includegraphics[width=\textwidth]{img/activity_wt_km.png}
+	\caption{HS wildtype}
+	\label{fig:activity_wt_km}
+    \end{subfigure}
+    \caption{Determination of relative superoxide oxidation per quinone concentration}
+    \label{fig:activity_km}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.9\textwidth}
+	\includegraphics[width=\textwidth]{img/activity_mut_km_lb.png}
+	\caption{HS mutant}
+	\label{fig:activity_mut_km_lb}
+    \end{subfigure}
+
+    \begin{subfigure}{0.9\textwidth}
+	\includegraphics[width=\textwidth]{img/activity_wt_km_lb.png}
+	\caption{HS wildtype}
+	\label{fig:activity_wt_km_lb}
+    \end{subfigure}
+    \caption{Determination of $K_m$n}
+    \label{fig:activity_km_lb}
 \end{figure}
 
 \chapter{Discussion}
@@ -450,3 +505,12 @@ As this fluorescence can be quenched with copper, however, there must be
 uncleaved dsRed left oriented towards the outside of the liposomes, as copper
 cannot enter those. This implies that cleavage was not complete, and a longer
 incubation or higher concentration of TEV protease would be needed.
+
+\section{Activity measurement}
+
+The equal to within rounding limits $v_{\text{max}}$ imply that the mutation
+does not impede the maximum speed of the enzyme in case of an overwhelming
+substrate concentration. The $K_m$ values however, which differ by two orders
+of magnitude, imply that the mutation significantly lowers the affinity of the
+enzyme for quinone, lowering its speed in a system with low substrate
+concentration.
