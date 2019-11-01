@@ -1,0 +1,167 @@
+\documentclass[a4paper]{scrartcl}
+
+% Uncomment to optimize for double-sided printing.
+% \KOMAoptions{twoside}
+
+% Set binding correction manually, if known.
+% \KOMAoptions{BCOR=2cm}
+
+% Localization options
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Quotations
+\usepackage{dirtytalk}
+
+% Enhanced verbatim sections. We're mainly interested in
+% \verbatiminput though.
+\usepackage{verbatim}
+
+% PDF-compatible landscape mode.
+% Makes PDF viewers show the page rotated by 90°.
+\usepackage{pdflscape}
+
+% Subfigures
+\usepackage{subcaption}
+
+% Figures at end (of chapter via \processdelayedfloats)
+% \usepackage[figuresonly,nomarkers,nofiglist]{endfloat}
+
+% Advanced tables
+\usepackage{tabu}
+\usepackage{longtable}
+
+% Fancy tablerules
+\usepackage{booktabs}
+
+% Graphics
+\usepackage{graphicx}
+
+% Current time
+\usepackage[useregional=numeric]{datetime2}
+
+% Float barriers.
+% Automatically add a FloatBarrier to each \section
+\usepackage[section]{placeins}
+
+% Importing CSV into tables
+\usepackage{csvsimple}
+
+% Custom header and footer
+\usepackage{fancyhdr}
+
+\usepackage{geometry}
+\usepackage{layout}
+
+% Math tools
+\usepackage{mathtools}
+% Math symbols
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{amsthm}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+\pagestyle{plain}
+% \fancyhf{}
+% \lhead{}
+% \lfoot{}
+% \rfoot{}
+% 
+% Source code & highlighting
+\usepackage{listings}
+
+% SI units
+\usepackage[binary-units=true]{siunitx}
+\DeclareSIUnit\Molar{\textsc{m}}
+\DeclareSIUnit\Da{\textsc{Da}}
+\DeclareSIUnit\mole{mol}
+\DeclareSIUnit\rpm{rpm}
+\DeclareSIUnit\cfu{cfu}
+
+\usepackage{mhchem}
+
+\newcommand{\mysubject}{2115 - Lab course biochemistry 2}
+\newcommand{\mytitle}{Expression, purification and characterization of superoxide oxidase SOO}
+
+% Convenience commands
+\newcommand{\mailsubject}{\mysubject{} \mytitle{}}
+\newcommand{\maillink}[2]{\href{mailto:#1?subject=\mailsubject}
+                               {#2}}
+
+% Should use this command wherever the print date is mentioned.
+\newcommand{\printdate}{\today}
+
+\subject{2115 - Lab course biochemistry 2}
+\title{Expression, purification and characterization of superoxide oxidase `SOO'}
+\subtitle{Final report}
+\author{\maillink{michael.senn@students.unibe.ch}{Michael Senn} - 16-126-880}
+
+\date{\printdate}
+
+\publishers{von Ballmoos group, University of Bern\\Abbas Maxime Abou Hamdan \& Sabina Deutschmann}
+
+% Needs to be the last command in the preamble, for one reason or
+% another. 
+\usepackage{hyperref}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+	Three variants of superoxide oxidase were grown in bacterial BL21 cells
+	and purified using size-exclusion and affinity chromatography.
+	Purification efficiency was monitored using fluorescence of
+	dsRed-tagged proteins.
+
+	Purified enzymes were reconstituted into liposomes using freeze-thaw
+	cycles. Reconstituted and solubilzed enzymes were then analyzed,
+	measuring their reduction in presence of superoxide or quinone, as well
+	as enzymatic activity using absorbance measurements.
+
+	Using the collected data the enzymes were characterized, estimating
+	their $K_m$ value as well as gaining insights into the orientation of
+	enzymes in liposomes.
+\end{abstract}
+
+\newpage
+\part*{Introduction}
+
+Reactive oxygen species (`ROS') such as superoxide (\ce{O2-}) or hydrogen
+peroxide (\ce{H2O2}) are toxic to the body, causing damage to proteins or DNA,
+with links to various diseases including cancer. As such organisms under
+aerobic conditions counteract ROS via eg Superoxide Dismutase (`SOD') which
+catalyzes the partitioning of superoxide into molecular oxygen and hydrogen
+peroxide.
+
+One major source of superoxide is the oxidative phosphoryliation within the
+mitochondrial matrix. \cite{Novo2008} To a lesser extent these superoxides
+diffuse into the cytoplasm, where they are acted upon by SOD. A significant
+portion of superoxides however is oxidised by superoxide oxidases - henceafter
+referred to as `SOO' or `Halonsaft' due to its colour - a family of
+membrane-bound proteins which oxidize superoxides.\cite{superoxide_salvaging}.
+
+One protein of this family is CybB from E. Coli which was shown to function as
+a superoxide:ubiquinone oxidoreductase. It oxidizes superoxide to oxygen while
+simultaneously reducing quinone to quinol.\cite{superoxide_salvaging} This
+enzymatic activity both serves to remove superoxides in close proximity to the
+cell membrane, as well as restore the quinone pool, helping to save energy.
+
+% TODO
+% - Characterizing (eg activity) we did?
+
+\newpage
+\part*{Material \& methods}
+
+\newpage
+\part*{Results \& discussion}
+
+\newpage
+\part*{Conclusion}
+
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
