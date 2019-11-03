@@ -1,0 +1,248 @@
+\part{Results \& discussion}
+
+\section{Transformation}
+
+The goal of bacterial transformation was to get competent E. Coli cells of the
+LEMO21 (DE3) strain to take up pET28a-cybB561 plasmids, allowing for the
+selective overexpression of HS in presence of lactose or IPTG. Rhamnose allowed
+to selectively inhibit the T7 polymerase translating the HS gene.
+\cite{memstar} To permit selection the plasmid further encodes for a resistance
+to kanamycin.
+
+The overnight incubated plates containing kanamycin had multiple colonies
+growing on them the next day. This showed that the heat shock treatment had
+been successful. Transformed colonies were not used further due to time
+constraints, rather expression was monitored simultaneously with
+pre-transformed starting culture.
+
+\section{Expression}
+
+Note that bacteria resulting from this step were not used further due to time
+constraint. Rather purification happened simultaneously, with a provided
+bacterial pellet.
+
+\subsection{Expression monitoring}
+
+During expression the efficiency of several media was to be established, both
+in terms of speed of cell growth as well as yield of HS per cell. Three
+different types of medium (LB, TB, ZYM-505) were prepared, with four samples
+each.
+
+Increasing the amount of produced proteins per cell was of interest as it
+lowers the amount of detergent required to solublize the cell membranes.
+
+Protein expression was monitored by measurement of \odbact of incubating
+samples, visualized in figure \ref{fig:absorption_expression}. A mesurement at
+\SI{90}{\min} was excluded as it had been done incorrectly. IPTG was added at
+\SI{90}{\min}.
+
+It was shown that cells grew faster in TB and ZYM-505 medium than in LB medium,
+as seen by the slope of the curve as well as final \odbact reached.
+
+It was further shown that samples not containing IPTG followed the normal
+growth pattern of bacterial cells, starting in a lag phase of little cell
+growth, a log phase of exponential cell growth - shown as a lineare incrase of
+\odbact - and the beginnings of a stationary phase where cell growth cedes. The
+absence of IPTG will have prevented overexpression of HS, allowing cells to
+grow as normal.
+
+Cells treated with IPTG at \SI{90}{\min} and not containing Rhamnose showed
+stagnation of cell growth indicative of overexpression of HS. Cells treated
+with IPTG and containing Rhamnose did not show any sign of overexpression of
+HS.
+
+\subsection{Expression efficiency}
+
+After expression the amount of expressed HS-Dsred was measured via fluorescence
+measurements. Results were normalized to cell density, giving an approximation
+of protein concentration per cell. Such normalized results are are shown in
+figure \ref{fig:fluorescence_expression}.
+
+\subsubsection{Base protein expression}
+
+Overall protein expression per cell can be estimated using IPTG-negative
+samples. It was shown that LB and ZYM-505 media produce comparable amounts of
+proteins per cell, while the amount of proteins per cell in the TB medium was
+significantly higher. This conflicts with the memstar paper which found that
+protein production normalized to cell density was only slightly higher in TB
+compared to the other two media. \cite{memstar}
+
+It is possible that the cell density of the TB samples was underestimated, as
+the linear relation between \odbact and cell density only holds for low values
+of \odbact, as well as the spectrophotometer being less accurate for values
+exceeding $1$.
+
+\subsubsection{HS-Dsred expression}
+
+Comparing the normalized fluorescence of IPTG-positive, Rhamnose-negative
+samples with other samples in the same media showed that addition of IPTG
+increased the amount of proteins - specifically HS-Dsred - which was expressed
+per cell.
+
+\subsubsection{Limiting HS-Dsred expression with Rhamnose}
+
+Addition of Rhamnose to samples was supposed to limit the overexpression of
+HS-Dsred, preventing a coplete stagnation of cell growth as well as the
+potential buildup of inclusion bodies. \cite{memstar}.
+
+As Rhamnose-positive samples did not show any sign of HS-Dsred expression, with
+fluorescence levels comparable to IPTG-negative samples, we conclude that
+either too much Rhamnose was added such that the T7 polymerase was inhibited
+fully, or that no IPTG had been added to those samples.
+
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{\textwidth}
+		\includegraphics[width=0.8\linewidth]{../img/absorption_expression.png}
+		\caption{\odbact values over time during protein expression}
+		\label{fig:absorption_expression}
+	\end{subfigure}
+
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{../img/expression_fluorescence.png}
+		\caption{Fluorescence of samples after protein expression}
+		\label{fig:fluorescence_expression}
+	\end{subfigure}
+
+	\caption{Monitoring speed and efficiency of expression}
+	\label{fig:expression}
+\end{figure}
+
+\section{Purification}
+
+\subsection{Membrane protein concentration}
+
+Concentration of harvested membrane proteins was determined in a BCA assay by
+comparison with a known standard. Absorption at \SI{562}{\nm} of the standard
+was measured and a linear regression calculated as $\text{absorption} = 0.81542
+\cdot \text{concentration} + 0.02701$. Measured absorptions and calculated
+concentrations of a dilution of membrae proteins are shown in table
+\ref{tbl:bca_absorption_sample}.
+
+Measurements with absorption values outside the standard's range of 0.0053 to
+1.6353 were discarded, which resulted in an average protein concentration of
+\SI{22.86 \pm 3.20}{\mg\per\ml}.
+
+\begin{table}
+	\centering
+	\begin{tabu}{llll}
+		\toprule
+		Absorption & Conc (linear regression) & Dilution factor & Conc (undiluted) \\
+		\midrule
+		\SI{2.3066}{OD562} & \SI{2.78}{\mg\per\ml} & 1:5  & \SI{13.92}{\mg\per\ml} \\
+		\SI{1.8855}{OD562} & \SI{2.28}{\mg\per\ml} & 1:10 & \SI{22.80}{\mg\per\ml} \\
+		\SI{0.8671}{OD562} & \SI{1.03}{\mg\per\ml} & 1:20 & \SI{20.60}{\mg\per\ml} \\
+		\SI{0.5388}{OD562} & \SI{0.63}{\mg\per\ml} & 1:40 & \SI{25.12}{\mg\per\ml} \\
+		\bottomrule
+	\end{tabu}
+	\caption{OD562 values of sample dilutions}
+	\label{tbl:bca_absorption_sample}
+\end{table}
+
+\subsection{Purified protein concentration}
+
+Protein concentration was determined using the absorbance of the two hemes at
+\SI{561}{\nm} as described. Measurement values between \SIrange{400}{600}{\nm}
+are shown in figure \ref{fig:hs_concentration}.
+
+A baseline was established by calculating the average absorption difference of
+reduced and oxidized form between \SIrange{580}{600}{\nm}. The absorption
+difference at \SI{561}{\nm} was calculated and the baseeline difference added.
+
+Given the path length of the cuvette as \SI{1}{\cm}, a dilution factor of 375
+and an extinction coefficient of \SI{46.36}{\per\milli\Molar\per\cm} the
+protein concentration was calculated using Beer's law. Such calculated
+concentrations are shown in table \ref{tbl:hs_concentration}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{../img/hs_concentration.png}
+	\caption{Absorption of HS for concentration determination}
+	\label{fig:hs_concentration}
+\end{figure}
+
+\begin{table}
+	\centering
+	\begin{tabu}{lllll}
+		\toprule
+		Protein & $\Delta_{\text{Absorption at \SI{561}{\nm}}}$ & Baseline & $\Delta_{\text{Absorption at \SI{561}{\nm} corr}}$ & Conc [\si{\milli\Molar}] \\
+		\midrule
+		Wildtype & 0.042 & 0.004 & 0.046 & 0.372 \\
+		Mutant & 0.043 & 0.006 & 0.049 & 0.396 \\
+		dsRed & 0.068 & 0.013 & 0.081 & 0.655 \\
+		\bottomrule
+	\end{tabu}
+	\caption{Concentration of purified HS}
+	\label{tbl:hs_concentration}
+\end{table}
+
+\subsection{SDS PAGE}
+
+Purification steps were checked with an SDS page, results shown in figure
+\ref{fig:sds}.
+
+\subsubesction{Wildtype \& mutant}
+
+Cyan marks HS, with an expected molecular weight of
+\SI{24}{\kilo\Da}\cite{pdb}. As was expected it was highly concentrated after
+the \ce{Ni} bead chromatography, and remained so after the ÄKTA SEC.
+Furthermore it can be seen in small quantities in the \SI{5}{\milli\Molar} His
+wash implying that a small amount was lost when washing the column. As the band
+of the after-ÄKTA steps seems smaller than the one preceding it it is assumed
+that some was also lost during the SEC.
+
+\subsubsectoin{Dsred}
+
+Green marks the HS-Dsred pair, with a combined expected weight of
+\SI{49}{\kilo\Da} \cite{pdb}. It takes the place of plain HS in the samples of
+the wildtype and mutant. After TEV cleavage - that is from the `before loading'
+colum on onwards - there is no band at this height anymore, which shows that
+cleavage was successful. After cleavage the solo HS is marked in cyan, near its
+expected size of \SI{24}{\kilo\Da}. Of interest are faint bands on the same
+height in the samples before cleavage, which might imply that a small amount of
+HS-Dsred had been cleaved before. In the reverse IMAC it was mostly found in
+the flowthrough, as the His tag is on the Dsred. Small amounts can be seen in
+the elution, implying that an intermediary wash step might have been required.
+
+Red marks Dsred with its molecular weight of \SI{25}{\kilo\Da}, further
+identified by being on the same height as the pure Dsred loaded in the last
+lane. It is mostly visible in the elution after cleavage, as its His tag
+allowed binding to the column, with tiny amounts visible in the flowthrough. Of
+interest once more are the corresponding bands in the lanes before cleavage,
+seeming to imply that it undergoes cleavage even in the absence of
+TEV-protease.
+
+Dark grey marks the TEV protease with a molecular weight of
+\SIrange{25}{27}{\kilo\Da} \cite{pdb}. It was found in the sample taken after
+cleavage, as well as the elute of the column due to its His tag. It was not
+found in the flowthrough, as its His tag allowed it to bind to the column.
+
+Yellow finally marks what seems to be a dimer of Dsred around
+\SI{50}{\kilo\Dalton}. It can be seen in nearly all lanes where Dsred itself is
+found.
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.8\textwidth}
+        \includegraphics[width=\textwidth]{../img/sds_wt_mut}
+        \caption{SDS PAGE gel of wildtype and mutant}
+        \label{fig:sds_wt_mut}
+    \end{subfigure}
+
+    \begin{subfigure}{0.8\textwidth}
+        \includegraphics[width=\textwidth]{../img/sds_dsred_tev_cleavage.png}
+        \caption{SDS PAGE gel of dsRed including cleaved dsRed}
+        \label{fig:sds_dsred_cleaved}
+    \end{subfigure}
+    \caption{SDS gels of three protein variants}
+    \label{fig:sds}
+\end{figure}
+
+\subsection{Purification efficiency}
+
+
+\section{Characterization}
+
+% Relative reduction, activity
