@@ -9,7 +9,7 @@ df_wide = read.csv("../data/raw/dsred_cleavage_fluorescence.csv")
 df_full = gather(df_wide, series, intensity, dsred_5ul:lipo_uncleaved_275ul_cu_edta)
 df_full$series = factor(df_full$series)
 
-df_full$protein[grepl('dsred_', df_full$series, fixed=TRUE)] = 'dsRed'
+df_full$protein[grepl('dsred_', df_full$series, fixed=TRUE)] = 'Solubilized uncleaved'
 df_full$protein[grepl('lipo_cleaved', df_full$series, fixed=TRUE)] = 'Liposomes uncleaved'
 df_full$protein[grepl('lipo_uncleaved', df_full$series, fixed=TRUE)] = 'Liposomes cleaved'
 df_full$protein = factor(df_full$protein)

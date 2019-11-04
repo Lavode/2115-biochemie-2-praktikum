@@ -52,6 +52,13 @@ write.csv(absorption, '../data/reduction_superox.csv', row.names = FALSE)
 ggplot(df_full, aes(x = time, y = absorption, color = series)) +
   geom_point(size = 0.1) +
   geom_line() +
+  
+  geom_vline(xintercept = 1, linetype = 'dotted', color = 'red') +
+  annotate("text", x = 0.9, y = 0.3, label = "Addition of XO", size = 3, color = 'red', hjust = 1) +
+  geom_vline(xintercept = 3, linetype = 'dotted', color = 'black') +
+  annotate("text", x = 2.9, y = 0.3, label = "Reduction with DTT", size = 3, color = 'black', hjust = 1) +
+  
+  
   facet_wrap(vars(protein, state), ncol = 2) +
   coord_cartesian(ylim=c(0, 0.4)) +
   labs(title = "Reduction of HS under superoxide addition", x = "Time [min]", y = "Absorption at 428nm") +

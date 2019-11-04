@@ -47,3 +47,4 @@ ggplot(df_full, aes(x = wavelength, y = absorption, color = state)) +
   labs(title = "HS concentration determination", x = "Wavelength [nm]", y = "Absorption") +
   theme_minimal() +
   ggsave('../img/hs_concentration.png', width = 20, units = 'cm', dpi = 'print')
+
