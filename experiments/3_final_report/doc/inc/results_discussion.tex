@@ -1,3 +1,5 @@
+\twocolumn
+
 % TODO: List goals where applicable
 
 \part{Results \& discussion}
@@ -39,7 +41,10 @@ samples, visualized in figure \ref{fig:absorption_expression}. A mesurement at
 \SI{90}{\min}.
 
 It was shown that cells grew faster in TB and ZYM-505 medium than in LB medium,
-as seen by the slope of the curve as well as final \odbact reached.
+as seen by the slope of the curve as well as final \odbact reached. This was
+likely caused by the higher concentration of nutrients such as yeast extract
+and tryptone in the case of TB, respectively additional glucose and lactose in
+the case of ZYM-505.
 
 It was further shown that samples not containing IPTG followed the normal
 growth pattern of bacterial cells, starting in a lag phase of little cell
@@ -93,7 +98,7 @@ either too much Rhamnose was added such that the T7 polymerase was inhibited
 fully, or that no IPTG had been added to those samples.
 
 
-\begin{figure}
+\begin{figure*}
 	\centering
 	\begin{subfigure}{0.45\textwidth}
 		\includegraphics[width=\linewidth]{../img/absorption_expression.png}
@@ -110,7 +115,7 @@ fully, or that no IPTG had been added to those samples.
 
 	\caption{Monitoring speed and efficiency of expression}
 	\label{fig:expression}
-\end{figure}
+\end{figure*}
 
 \section{Purification}
 
@@ -127,7 +132,7 @@ Measurements with absorption values outside the standard's range of 0.0053 to
 1.6353 were discarded, which resulted in an average protein concentration of
 \SI{22.86 \pm 3.20}{\mg\per\ml}.
 
-\begin{table}
+\begin{table*}
 	\centering
 	\begin{tabu}{llll}
 		\toprule
@@ -141,7 +146,7 @@ Measurements with absorption values outside the standard's range of 0.0053 to
 	\end{tabu}
 	\caption{OD562 values of sample dilutions}
 	\label{tbl:bca_absorption_sample}
-\end{table}
+\end{table*}
 
 \subsection{Purified protein concentration}
 
@@ -158,7 +163,7 @@ and an extinction coefficient of \SI{46.36}{\per\milli\Molar\per\cm} the
 protein concentration was calculated using Beer's law. Such calculated
 concentrations are shown in table \ref{tbl:hs_concentration}.
 
-\begin{table}[ht]
+\begin{table*}[ht]
 	\begin{varwidth}[b]{0.4\linewidth}
 		\centering
 		\begin{tabu}{ll}
@@ -204,7 +209,7 @@ concentrations are shown in table \ref{tbl:hs_concentration}.
 		\captionof{figure}{Absorption of HS for concentration determination}
 		\label{fig:hs_concentration}
 	\end{minipage}
-\end{table}
+\end{table*}
 
 \subsection{SDS PAGE}
 
@@ -251,7 +256,7 @@ Yellow finally marks what seems to be a dimer of Dsred around
 \SI{50}{\kilo\Da}. It can be seen in nearly all lanes where Dsred itself is
 found.
 
-\begin{figure}
+\begin{figure*}
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{../img/sds_wt_mut}
@@ -266,11 +271,11 @@ found.
     \end{subfigure}
     \caption{SDS gels of three protein variants}
     \label{fig:sds}
-\end{figure}
+\end{figure*}
 
 \subsection{Purification efficiency}
 
-Fluorescence values of HS-Dsred samples, from aliqots taken during various
+Fluorescence values of HS-Dsred samples, from aliquots taken during various
 steps of the purification, scaled to sample volume, are shown in figure
 \ref{fig:purification_fluorescence}. They allowed the tracking of losses during
 purification steps.
@@ -292,7 +297,7 @@ the elution.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\textwidth]{../img/purification_fluorescence.png}
+	\includegraphics[width=\linewidth]{../img/purification_fluorescence.png}
 	\caption{Fluorescence measurements to track purification losses}
 	\label{fig:purification_fluorescence}
 \end{figure}
@@ -343,7 +348,7 @@ peroxide.
 
 The data showed no significant difference in relative reduction between
 wildtype and mutant was shown. This implies that the mutation has no effect on
-the equilibrium if sufficient substrate is present. The mutation might have an
+the enzyme activity if sufficient substrate is present. The mutation might have an
 effect on the affinity of the enzyme, as was shown later.
 
 \subsubsection{Quinol as substrate}
@@ -367,7 +372,7 @@ HS oriented such that the superoxide-oxidating end is on the outside of the
 liposomes can be estimated to be about half the total amount of reconstituted
 HS.
 
-\begin{figure}
+\begin{figure*}
     \centering
     \begin{subfigure}{0.45\textwidth}
 	\centering
@@ -398,13 +403,13 @@ HS.
     \end{subfigure}
     \caption{Reduction of HS by substrates}
     \label{fig:hs_reduction}
-\end{figure}
+\end{figure*}
 
 % TODO table with relative reduction rates?
 
 \subsection{Fluorescence before and after TEV cleavage of reconstituted enzymes}
 
-To control whether overnight TEV-cleavag was sucessful, fluorescence of cleaved
+To control whether overnight TEV-cleavage was sucessful, fluorescence of cleaved
 and uncleaved reconstituted samples was measured. Furthermore the ability to
 quench and restore fluorescence via addition of \ce{Cu^{2+}} and EDTA
 respectively was investigated. Collected data is shown in figure
@@ -426,17 +431,90 @@ clarity.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{../img/dsred_cleavage_fluorescence.png}
-	\caption{Fluorescence and quenching thereof of cleaved and uncleaved dsRed}
+	\includegraphics[width=\linewidth]{../img/dsred_cleavage_fluorescence.png}
+	\caption{Fluorescence and quenching thereof of cleaved and uncleaved reconstituted liposomes with cyb561-Dsred}
 	\label{fig:dsred_cleavage_fluorescence}
 \end{figure}
 
 \subsection{Enzyme activity}
 
+In order to determine enzymatic activity an assay containing a source of
+superoxide (xanthine oxidase and hypoxanthine), a source of quinone (quinone
+and BO3 oxidase), and WST-1 dye to measure superoxide concentration via
+absorption measurement at \SI{455}{\nm} was used.
 
+In a first step, sufficient HS concentration to quench superoxide production as
+efficiently as SOD was determined, which was \SI{4.764}{\micro\Molar} for the
+mutant, \SI{0.496}{\micro\Molar} for the wild type.
 
+In a second step the concentration of superoxide via WST-1 reduction was
+observed. As before the system was prepared and measurements started. XO and HS
+were added with a delay, three slopes were measured:
 
+\begin{itemize}
+	\item $s_{\text{HS}}$: Slope after HS addition
+	\item $s_{\text{XO}}$: Average slope after XO addition
+	\item $s_{\text{SOD}}$: Slope after SOD addition
+\end{itemize}
 
+This allowed calculating the relative superoxide production as
+$\text{SO}_{\text{rel}} := \frac{s_{\text{HS}}}{s_{\text{XO}} -
+s_{\text{SOD}}}$ , and relative reduction of superoxide - corresponding to
+enzymatic activity - as  $\text{HS-Activity}_{\text{rel}} := 1 -
+\text{SO}_{\text{rel}}$. Such results in a linear as well as double-reciprocal
+Lineweaver-Burke plot are shown in figure \ref{fig:activity}.
 
-% TODO: DISCUSSION
-% - Add more copper to fluorescence expriemnt, see if fully quenched
+A linear regresion $y = a \cdot x + b$ was performed on the Lineweaver-Burke
+plot. Using those parameters the maximum reaction velocity and $K_m$ were
+determined as $v_\text{max} := b^{-1}$, $K_m := v_\text{max} \cdot a$.
+Calculated values are shown in table \ref{tbl:activity_km}. It was shown that
+the $K_m$ of the mutant was two two three orders of magnitude lower than that
+of the wildtype, implying that the mutation either lowered the affinity of the
+enzyme for its substrate, or decreased the speed at which they are processed.
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{0.4\textwidth}
+		\includegraphics[width=\linewidth]{../img/activity_wt_km.png}
+		\caption{Relative wildtype activity}
+		\label{fig:activity_wt_km}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../img/activity_wt_km_lb.png}
+		\caption{LB plot of wildtype activity}
+		\label{fig:activity_wt_km_lb}
+	\end{subfigure}
+
+	\begin{subfigure}{0.4\textwidth}
+		\includegraphics[width=\linewidth]{../img/activity_mut_km.png}
+		\caption{Relative mutant activity}
+		\label{fig:activity_mut_km}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../img/activity_mut_km_lb.png}
+		\caption{LB plot of mutant activity}
+		\label{fig:activity_mut_km_lb}
+	\end{subfigure}
+
+	\caption{Activity determination of wildtype and mutant}
+	\label{fig:activity}
+\end{figure*}
+
+\begin{table*}
+	\centering
+	\begin{tabu}{lllll}
+		\toprule
+		Protein & Slope $a$ & Y-intercept $b$ & $v_{\text{max}} = b^{-1}$ & $K_m = v_{\text{max}} \cdot a$ \\
+		\midrule
+		Wildtype & 0.0065 & 1.1 & \SI{90.9}{\percent} & \SI{0.0059}{\micro\Molar} \\
+		Mutant & 0.24 & 1.1 & \SI{90.9}{\percent} & \SI{0.218}{\micro\Molar} \\
+		\bottomrule
+	\end{tabu}
+	\caption{Determination of $K_m$ for HS}
+	\label{tbl:activity_km}
+\end{table*}
+

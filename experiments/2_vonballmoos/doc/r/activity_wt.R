@@ -48,7 +48,7 @@ ggplot(df_slopes, aes(x = concentration, y = relative_reduction)) +
   geom_point() +
   geom_line() +
   #coord_cartesian(ylim=c(0, 0.4)) +
-  labs(title = "Determination of HS KM", subtitle = 'Wildtype', x = "Concentration [uM]", y = "Relative superoxide oxidation [%]") +
+  labs(title = "Determination of HS KM", subtitle = 'Wildtype', x = "Quinone concentration [μM]", y = "Relative superoxide oxidation [%]") +
   theme_minimal() +
   ggsave('../img/activity_wt_km.png', width = 20, units = 'cm', dpi = 'print')
 
@@ -56,7 +56,7 @@ ggplot(df_slopes, aes(x = concentration_inverse, y = relative_reduction_inverse)
   geom_point() +
   geom_smooth(method = 'lm', se = FALSE) +
   stat_regline_equation(label.x = 75, label.y = 1.72) +
-  labs(title = "Determination of HS KM", subtitle = 'Wildtype', x = "1 / concentration [1 / uM]", y = "1 / Relative superoxide oxidation [1 / %]") +
+  labs(title = "Determination of HS KM", subtitle = 'Wildtype', x = "1 / Quinone concentration [1 / μM]", y = "1 / Relative superoxide oxidation [1 / %]") +
   theme_minimal() +
   ggsave('../img/activity_wt_km_lb.png', width = 20, units = 'cm', dpi = 'print')
 

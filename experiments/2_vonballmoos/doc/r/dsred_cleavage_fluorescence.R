@@ -16,9 +16,13 @@ df_full$protein = factor(df_full$protein)
 
 df_full$copper = ifelse(grepl('_cu', df_full$series, fixed=TRUE), TRUE, FALSE)
 df_full$edta = ifelse(grepl('_edta', df_full$series, fixed=TRUE), TRUE, FALSE)
-
 df_full$copper = factor(df_full$copper)
 df_full$edta = factor(df_full$edta)
+
+df_full$volume[grepl('_5ul', df_full$series, fixed=TRUE)] = '5 μl'
+df_full$volume[grepl('_100ul', df_full$series, fixed=TRUE)] = '100 μl'
+df_full$volume[grepl('_275ul', df_full$series, fixed=TRUE)] = '275 μl'
+df_full$volume = factor(df_full$volume)
 
 # Custom facet labels
 copper.labs <- c("+Copper", "")
@@ -26,7 +30,7 @@ names(copper.labs) <- c(TRUE, FALSE)
 edta.labs <- c("+EDTA", "")
 names(edta.labs) <- c(TRUE, FALSE)
 
-ggplot(df_full, aes(x = wavelength, y = intensity, color = series)) +
+ggplot(df_full, aes(x = wavelength, y = intensity, color = volume)) +
   geom_point(size = 0.1) +
   geom_line() +
   facet_wrap(
