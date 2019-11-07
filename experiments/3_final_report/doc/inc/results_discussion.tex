@@ -7,15 +7,15 @@
 The goal of bacterial transformation was to get competent \ecoli{} cells of the
 LEMO21 (DE3) strain to take up pET28a-cybB561 plasmids, allowing for the
 selective overexpression of HS in presence of lactose or IPTG. Rhamnose allowed
-to selectively inhibit the T7 polymerase translating the HS gene.
-\cite{memstar} To permit selection the plasmid further encodes for a resistance
+to selectively inhibit the T7 polymerase translating the HS protein.
+\cite{memstar} To permit selection the plasmid further encoded for a resistance
 to kanamycin.
 
 The overnight incubated plates containing kanamycin had multiple colonies
 growing on them the next day. This showed that the heat shock treatment had
 been successful. Transformed colonies were not used further due to time
 constraints, rather expression was monitored simultaneously with
-pre-transformed starting culture.
+a pre-transformed starting culture.
 
 \section{Expression}
 
@@ -33,13 +33,13 @@ each.
 Increasing the amount of produced proteins per cell was of interest as it
 lowers the amount of detergent required to solubilize the cell membranes.
 
-Protein expression was monitored by measurement of \odbact of incubating
+Protein expression was monitored by measurement of \odbact{} of incubating
 samples, visualized in figure \ref{fig:absorption_expression}. A measurement at
 \SI{90}{\min} was excluded as it had been done incorrectly. IPTG was added at
 \SI{90}{\min}.
 
 It was shown that cells grew faster in TB and ZYM-505 medium than in LB medium,
-as seen by the slope of the curve as well as final \odbact reached. This was
+as seen by the slope of the curve as well as final \odbact{} reached. This was
 likely caused by the higher concentration of nutrients such as yeast extract
 and tryptone in the case of TB, respectively additional glucose and lactose in
 the case of ZYM-505.
@@ -52,9 +52,11 @@ absence of IPTG will have prevented overexpression of HS, allowing cells to
 grow as normal.
 
 Cells treated with IPTG at \SI{90}{\min} and not containing Rhamnose showed
-stagnation of cell growth indicative of overexpression of HS. Cells treated
-with IPTG and containing Rhamnose did not show any sign of overexpression of
-HS.
+stagnation of cell growth indicative of overexpression of HS, as cells spent
+all energy on protein expression rather than on cell division. Cells treated
+with IPTG and containing Rhamnose did unexpectedly not show any sign of HS
+overexpression, while expected behaviour was a mixture of cell division and HS
+overexpression.
 
 \subsection{Expression efficiency}
 
@@ -73,8 +75,8 @@ protein production normalized to cell density was only slightly higher in TB
 compared to the other two media. \cite{memstar}
 
 It is possible that the cell density of the TB samples was underestimated, as
-the linear relation between \odbact and cell density only holds for low values
-of \odbact, as well as the spectrophotometer being less accurate for values
+the linear relation between \odbact{} and cell density only holds for low values
+of \odbact{}, as well as the spectrophotometer being less accurate for values
 exceeding $1$.
 
 \subsubsection{\hsdsred{} expression}
@@ -90,10 +92,10 @@ Addition of Rhamnose to samples was supposed to limit the overexpression of
 \hsdsred{}, preventing a complete stagnation of cell growth as well as the
 potential buildup of inclusion bodies. \cite{memstar}.
 
-As Rhamnose-positive samples did not show any sign of \hsdsred{} expression, with
-fluorescence levels comparable to IPTG-negative samples, we conclude that
-either too much Rhamnose was added such that the T7 polymerase was inhibited
-fully, or that no IPTG had been added to those samples.
+As Rhamnose-positive samples did not show any sign of \hsdsred{} expression,
+with fluorescence levels comparable to IPTG-negative samples, it was
+conjectured that either too much Rhamnose was added such that the T7 polymerase
+was inhibited fully, or that no IPTG had been added to those samples.
 
 
 \begin{figure}
@@ -115,7 +117,7 @@ fully, or that no IPTG had been added to those samples.
 \subsection{Membrane protein concentration}
 
 Concentration of harvested membrane proteins was determined in a BCA assay by
-comparison with a known standard. Absorption at \SI{562}{\nm} of the standard
+comparison with a known standard. Absorption of the standard at \SI{562}{\nm}
 was measured and a linear regression calculated as $\text{absorption} = 0.81542
 \cdot \text{concentration} + 0.02701$. Measured absorption and calculated
 concentrations of a dilution of membrane proteins are shown in table
@@ -143,13 +145,16 @@ Measurements with absorption values outside the standard's range of 0.0053 to
 
 \subsection{Purified protein concentration}
 
-Protein concentration was determined using the absorbance of the two hemes at
-\SI{561}{\nm} as described. Measurement values between \SIrange{400}{600}{\nm}
-are shown in figure \ref{fig:hs_concentration}.
+After purificaction as described using affinity\hyp{} and
+size\hyp{}exclusion\hyp{}chromatography, protein concentration was determined
+using the absorbance of the two hemes at \SI{561}{\nm}.
+Measurement values between \SIrange{400}{600}{\nm} are shown in figure
+\ref{fig:hs_concentration}.
 
 A baseline was established by calculating the average absorption difference of
 reduced and oxidised form between \SIrange{580}{600}{\nm}. The absorption
-difference at \SI{561}{\nm} was calculated and the baseline difference added.
+difference of oxidized and reduced form at \SI{561}{\nm} was calculated and the
+baseline difference added.
 
 Given the path length of the cuvette as \SI{1}{\cm}, a dilution factor of 375
 and an extinction coefficient of \SI{46.36}{\per\milli\Molar\per\cm} the
@@ -204,9 +209,9 @@ concentrations are shown in table \ref{tbl:hs_concentration}.
 	\end{minipage}
 \end{table*}
 
-\subsection{SDS PAGE}
+\subsection{SDS\hyp{}PAGE}
 
-Purification steps were checked with an SDS page, results shown in figure
+Purification steps were checked with an SDS\hyp{}PAGE, results shown in figure
 \ref{fig:sds}.
 
 \subsubsection{\hs{} \& \hsmut{}}
@@ -274,14 +279,14 @@ likely correspond to such doublets, found in any lane where Dsred was present.
 \subsection{Purification efficiency}
 
 Fluorescence values of \hsdsred{} samples, from aliquots taken during various
-steps of the purification, scaled to sample volume, are shown in figure
-\ref{fig:purification_fluorescence}. They allowed the tracking of losses during
-purification steps.
+steps of the purification to track purification efficency, scaled to sample
+volume, are shown in figure \ref{fig:purification_fluorescence}.
+
 
 Measurements showed that the breakage of cells in the maximator did not incur
-significant losses. Membrane extraction via ultracentrifugation caused
-significant losses of protein, as potentially not all membrane proteins had
-been pelleted, or parts of the pellets were lost.
+significant losses. Membrane extraction via ultracentrifugation caused losses
+of protein, as potentially not all membrane proteins had been pelleted, or
+parts of the pellets were lost.
 
 Comparison of fluorescence before the \ce{Ni} beads affinity chromatography
 (`Membranes') with the one after (`\ce{Ni} beads elution') imply that not a lot
@@ -289,9 +294,9 @@ of proteins were lost during affinity chromatography, with the majority of
 losses being in the column flowthrough, implying that too much His-tagged
 protein was loaded onto the column at once.
 
-Measurements of the reverse IMAC finally confirmed that most of the His-tagged
-Dsred which was loaded was able to bind to the column, and was hence found in
-the elution.
+Measurements of the reverse IMAC confirmed that most of the His-tagged Dsred
+could bind to the column and was found in the elution, while small amounts of
+uncleaved \hsdsred{} or Dsred were found in the flowthrough.
 
 \begin{figure}
 	\centering
@@ -363,46 +368,48 @@ concentration is limited, as was shown later.
 Relative reduction of reconstituted HS was shown to be close to the theoretical
 maximum of \SI{50}{\percent}, as only one of the two Hemes can be reduced by
 quinol. Relative reduction of solubilized HS was shown to be lower than that of
-reconstituted enzymes, which might be the result of hydrophobic quinone binding
+reconstituted enzymes. This might be the result of hydrophobic quinone binding
 to the hydrophobic inner parts of liposomes, which is close to where the active
-centre of HS is located\cite{superoxide_salvaging}.
+centre of HS is located, thereby promoting the reduction of
+HS.\cite{superoxide_salvaging}
 
 \subsubsection{Superoxide as substrate}
 
-The data shows that the relative reduction of solubilized enzymes by superoxide
-is significantly higher than those of reconstituted enzymes. This might imply
-that superoxide is unable to enter liposomes, such that in the case of
-liposomes it cannot reduce those HS enzymes whose superoxide-oxidating site is
-within the liposome. Such an observation was also made in the one of the
+The data showed that the relative reduction of solubilized enzymes by
+superoxide was significantly higher than those of reconstituted enzymes. This
+might imply that superoxide is unable to enter liposomes, such that in the case
+of liposomes it cannot reduce those HS enzymes whose superoxide-oxidating site
+is within the liposome. Such an observation was also made in the one of the
 referenced papers \cite{superoxide_salvaging}. If this holds then the ratio of
 HS oriented such that the superoxide-oxidating end is on the outside of the
 liposomes can be estimated to be about half the total amount of reconstituted
-HS.
+HS, as relative reduction by superoxides of reconstituted liposomes was roughly
+half the relative reduction of solubilized enzymes.
 
 \begin{figure*}
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.49\textwidth}
 	\centering
 	\includegraphics[width=\textwidth]{../img/reduction_quinol.png}
 	\caption{Reduction of HS by quinol}
 	\label{fig:reduction_quinol}
     \end{subfigure}
     ~
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.49\textwidth}
 	\centering
 	\includegraphics[width=\textwidth]{../img/reduction_superox.png}
 	\caption{Reduction of HS by superoxide}
 	\label{fig:reduction_superox}
     \end{subfigure}
 
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.49\textwidth}
 	\centering
 	\includegraphics[width=\textwidth]{../img/reduction_quinol_relative.png}
 	\caption{Relative reduction of HS by quinol}
 	\label{fig:reduction_quinol_relative}
     \end{subfigure}
     ~
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.49\textwidth}
 	\centering
 	\includegraphics[width=\textwidth]{../img/reduction_superox_relative.png}
 	\caption{Relative reduction of HS by superoxide}
@@ -417,7 +424,7 @@ HS.
 \subsection{Fluorescence before and after TEV cleavage of reconstituted enzymes}
 
 To control whether overnight TEV-cleavage was successful, fluorescence of
-cleaved and uncleaved reconstituted liposomes with \hsmut{} was measured.
+cleaved and uncleaved reconstituted liposomes with \hsdsred{} was measured.
 Furthermore the ability to quench and restore fluorescence via addition of
 \SI{1}{\milli\Molar} \ce{Cu^{2+}} and \SI{10}{\milli\Molar} EDTA respectively
 was investigated. Collected data is shown in figure
@@ -432,8 +439,8 @@ able to be quenched similarly, with nearly complete quenching for sufficiently
 high copper concentrations in relation to liposome concentration. This implied
 that the liposome contained \hsdsred{} orientated such that Dsred is on the
 outside of the liposomes, where copper was able to reach it. The not quite
-complete quenching implies that either not enough copper had been added, or
-that some \hsdsred{} was oriented such that its Dsred is on the inside of the
+complete quenching implied that either not enough copper had been added, or
+that some \hsdsred{} was oriented such that its Dsred was on the inside of the
 liposome. Further experiments with increased copper concentration would be
 needed to bring clarity.
 
@@ -448,12 +455,26 @@ was higher than that of TEV-treated ones, this allowed no direct conclusion on
 whether TEV cleavage was successful, as the concentration of TEV-treated vs
 untreated liposomes had not been standardised.
 
-\begin{figure}
+\begin{figure*}
 	\centering
-	\includegraphics[width=\linewidth]{../img/dsred_cleavage_fluorescence.png}
-	\caption{Fluorescence and quenching thereof of cleaved and uncleaved reconstituted liposomes with \hsdsred{}}
-	\label{fig:dsred_cleavage_fluorescence}
-\end{figure}
+	\begin{subfigure}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{../img/activity_km.png}
+		\caption{Relative activity}
+		\label{fig:activity_km}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{../img/activity_km_lb.png}
+		\caption{LB plot of activity}
+		\label{fig:activity_km_lb}
+	\end{subfigure}
+
+	\caption{Activity determination of \hs{} \& \hsmut{}}
+	\label{fig:activity}
+\end{figure*}
+
 
 \subsection{Enzyme activity}
 
@@ -478,7 +499,7 @@ were added with a delay, three slopes were measured:
 
 This allowed calculating the relative superoxide production as
 $\text{SO}_{\text{rel}} := \frac{s_{\text{HS}}}{s_{\text{XO}} -
-s_{\text{SOD}}}$ , and relative reduction of superoxide - corresponding to
+s_{\text{SOD}}}$ , and relative oxidation of superoxide - corresponding to
 enzymatic activity - as  $\text{HS-Activity}_{\text{rel}} := 1 -
 \text{SO}_{\text{rel}}$. Such results in a linear as well as double-reciprocal
 Lineweaver-Burke plot are shown in figures \ref{fig:activity_km} and
@@ -488,29 +509,18 @@ A linear regression $y = a \cdot x + b$ was performed on the Lineweaver-Burke
 plot. Using those parameters the maximum reaction velocity and $K_m$ were
 determined as $v_\text{max} := b^{-1}$, $K_m := v_\text{max} \cdot a$.
 Calculated values are shown in table \ref{tbl:activity_km}. It was shown that
-the $K_m$ of \hsmut{} was two two three orders of magnitude lower than that
-of \hs{}, implying that the mutation either lowered the affinity of the
-enzyme for its substrate, or decreased the speed at which they are processed.
+the $K_m$ of \hsmut{} was two two three orders of magnitude lower than that of
+\hs{}. As the maximum velocity $v_{\text{max}}$ did not differ, it was implied
+that the H158F mutation lowered the affinity of the enzyme for quinone, rather
+than decreasing the speed at which the reacton takes place.
 
 \begin{figure}
 	\centering
-	\begin{subfigure}{\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{../img/activity_km.png}
-		\caption{Relative activity}
-		\label{fig:activity_km}
-	\end{subfigure}
-	\\
-	\begin{subfigure}{\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{../img/activity_km_lb.png}
-		\caption{LB plot of activity}
-		\label{fig:activity_km_lb}
-	\end{subfigure}
-
-	\caption{Activity determination of \hs{} \& \hsmut{}}
-	\label{fig:activity}
+	\includegraphics[width=\linewidth]{../img/dsred_cleavage_fluorescence.png}
+	\caption{Fluorescence and quenching thereof of cleaved and uncleaved reconstituted liposomes with \hsdsred{}}
+	\label{fig:dsred_cleavage_fluorescence}
 \end{figure}
+
 
 \begin{table}
 	\centering
