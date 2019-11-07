@@ -1,7 +1,5 @@
 \twocolumn
 
-% TODO: List goals where applicable
-
 \part{Results \& discussion}
 
 \section{Transformation}
@@ -33,10 +31,10 @@ different types of medium (LB, TB, ZYM-505) were prepared, with four samples
 each.
 
 Increasing the amount of produced proteins per cell was of interest as it
-lowers the amount of detergent required to solublize the cell membranes.
+lowers the amount of detergent required to solubilize the cell membranes.
 
 Protein expression was monitored by measurement of \odbact of incubating
-samples, visualized in figure \ref{fig:absorption_expression}. A mesurement at
+samples, visualized in figure \ref{fig:absorption_expression}. A measurement at
 \SI{90}{\min} was excluded as it had been done incorrectly. IPTG was added at
 \SI{90}{\min}.
 
@@ -48,7 +46,7 @@ the case of ZYM-505.
 
 It was further shown that samples not containing IPTG followed the normal
 growth pattern of bacterial cells, starting in a lag phase of little cell
-growth, a log phase of exponential cell growth - shown as a lineare incrase of
+growth, a log phase of exponential cell growth - shown as a linear increase of
 \odbact - and the beginnings of a stationary phase where cell growth cedes. The
 absence of IPTG will have prevented overexpression of HS, allowing cells to
 grow as normal.
@@ -89,7 +87,7 @@ per cell.
 \subsubsection{Limiting \hsdsred{} expression with Rhamnose}
 
 Addition of Rhamnose to samples was supposed to limit the overexpression of
-\hsdsred{}, preventing a coplete stagnation of cell growth as well as the
+\hsdsred{}, preventing a complete stagnation of cell growth as well as the
 potential buildup of inclusion bodies. \cite{memstar}.
 
 As Rhamnose-positive samples did not show any sign of \hsdsred{} expression, with
@@ -119,8 +117,8 @@ fully, or that no IPTG had been added to those samples.
 Concentration of harvested membrane proteins was determined in a BCA assay by
 comparison with a known standard. Absorption at \SI{562}{\nm} of the standard
 was measured and a linear regression calculated as $\text{absorption} = 0.81542
-\cdot \text{concentration} + 0.02701$. Measured absorptions and calculated
-concentrations of a dilution of membrae proteins are shown in table
+\cdot \text{concentration} + 0.02701$. Measured absorption and calculated
+concentrations of a dilution of membrane proteins are shown in table
 \ref{tbl:bca_absorption_sample}.
 
 Measurements with absorption values outside the standard's range of 0.0053 to
@@ -150,8 +148,8 @@ Protein concentration was determined using the absorbance of the two hemes at
 are shown in figure \ref{fig:hs_concentration}.
 
 A baseline was established by calculating the average absorption difference of
-reduced and oxidized form between \SIrange{580}{600}{\nm}. The absorption
-difference at \SI{561}{\nm} was calculated and the baseeline difference added.
+reduced and oxidised form between \SIrange{580}{600}{\nm}. The absorption
+difference at \SI{561}{\nm} was calculated and the baseline difference added.
 
 Given the path length of the cuvette as \SI{1}{\cm}, a dilution factor of 375
 and an extinction coefficient of \SI{46.36}{\per\milli\Molar\per\cm} the
@@ -217,7 +215,8 @@ Cyan marks HS, with an expected molecular weight of
 \SI{24}{\kilo\Da}\cite{pdb}. As was expected it was highly concentrated after
 the \ce{Ni} bead chromatography, and remained so after the ÄKTA SEC.
 Furthermore it can be seen in small quantities in the \SI{5}{\milli\Molar} His
-wash implying that a small amount was lost when washing the column. As the band
+wash implying that a small amount was lost when washing the column as the
+His-tagged buffer displaced the His-tagged protein from the column. As the band
 of the after-ÄKTA steps seems smaller than the one preceding it it is assumed
 that some was also lost during the SEC.
 
@@ -225,31 +224,35 @@ that some was also lost during the SEC.
 
 Green marks the \hsdsred{} pair, with a combined expected weight of
 \SI{49}{\kilo\Da} \cite{pdb}. It takes the place of plain HS in the samples of
-\hs{} and \hsmut{}. After TEV cleavage - that is from the `before loading' colum on
-onwards - there is no band at this height anymore, which shows that cleavage
-was successful. After cleavage the solo HS is marked in cyan, near its expected
-size of \SI{24}{\kilo\Da}. Of interest are faint bands on the same height in
-the samples before cleavage, which might imply that a small amount of \hsdsred{}
-had been cleaved before. In the reverse IMAC it was mostly found in the
-flowthrough, as the His tag is on the Dsred. Small amounts can be seen in the
-elution, implying that an intermediary wash step might have been required.
+\hs{} and \hsmut{}. After TEV cleavage - that is from the `before loading'
+column on onward - there is no band at this height anymore, which shows that
+either cleavage was successful or \hsdsred{} was lost another way. After
+cleavage the single HS is marked in cyan, near its expected size of
+\SI{24}{\kilo\Da}. Of interest are faint bands on the same height in the
+samples before cleavage, which might imply that a small amount of \hsdsred{}
+had been cleaved before. In the reverse IMAC \hs{} was mostly found in the
+flowthrough, as the His tag is on the Dsred so \hs{} was unable to bind to the
+column. Small amounts can be seen in the elution, implying that an intermediary
+wash step might have been required if a clean separation of \hs{} and Dsred was
+desired.
 
 Red marks Dsred with its molecular weight of \SI{25}{\kilo\Da}, further
 identified by being on the same height as the pure Dsred loaded in the last
 lane. It is mostly visible in the elution after cleavage, as its His tag
 allowed binding to the column, with tiny amounts visible in the flowthrough. Of
-interest once more are the corresponding bands in the lanes before cleavage,
-seeming to imply that it undergoes cleavage even in the absence of
-TEV-protease.
+interest once more were the corresponding bands in the lanes before cleavage.
+These were either due to impurities of a comparable size, or small amounts of
+\hsdsred were cleaved even before TEV protease was added - either due to
+another protease, or due to small amounts of TEV protease having been present
+already.
 
 Dark grey marks the TEV protease with a molecular weight of
-\SIrange{25}{27}{\kilo\Da} \cite{pdb}. It was found in the sample taken after
-cleavage, as well as the elute of the column due to its His tag. It was not
-found in the flowthrough, as its His tag allowed it to bind to the column.
+\SIrange{25}{27}{\kilo\Da} \cite{pdb}. As its His tag allowed it to bind to the
+column it was found in the elution, but not the flowthrough.
 
-Yellow finally marks what seems to be a dimer of Dsred around
-\SI{50}{\kilo\Da}. It can be seen in nearly all lanes where Dsred itself is
-found.
+As Dsred is known to migrate as doublets under denaturing
+conditions\cite{sacchetti2002} the yellow marker around \SI{50}{\kilo\Da} will
+likely correspond to such doublets, found in any lane where Dsred was present.
 
 \begin{figure*}
     \centering
@@ -283,8 +286,8 @@ been pelleted, or parts of the pellets were lost.
 Comparison of fluorescence before the \ce{Ni} beads affinity chromatography
 (`Membranes') with the one after (`\ce{Ni} beads elution') imply that not a lot
 of proteins were lost during affinity chromatography, with the majority of
-losses being in the column flowthrough, implying that too much protein was
-loaded onto the column at once.
+losses being in the column flowthrough, implying that too much His-tagged
+protein was loaded onto the column at once.
 
 Measurements of the reverse IMAC finally confirmed that most of the His-tagged
 Dsred which was loaded was able to bind to the column, and was hence found in
@@ -306,12 +309,13 @@ system containing both.
 \subsection{Relative enzyme reduction in presence of quinol \& superoxide}
 
 Absorption measurements of HS as shown in figure \ref{fig:reduction_quinol} and
-\ref{fig:reduction_superox} were used to determine the relative reduction
-rate of HS in presence of quinol or superoxide. A baseline was established
-using the average absorption between \SIrange{0.8}{0.9}{\min}. Reduction caused
-by presence of either substrate was determined using the absorption between
-\SIrange{2.5}{2.6}{\min}, and full reduction by DTT was determined using
-absorption between \SIrange{3.9}{4}{\min}.
+\ref{fig:reduction_superox} were used to determine the relative reduction rate
+of HS in presence of quinol or superoxide. A baseline $od_{\text{base}}$ was
+established using the average absorption between \SIrange{0.8}{0.9}{\min}.
+Reduction caused by presence of either substrate $od_{\text{substrate}}$ was
+determined using the absorption between \SIrange{2.5}{2.6}{\min}, and full
+reduction by DTT $od_{\text{full}}$ was determined using absorption between
+\SIrange{3.9}{4}{\min}.
 
 % TODO: Table with calculation?
 % \begin{table}
@@ -329,31 +333,39 @@ absorption between \SIrange{3.9}{4}{\min}.
 % 	\caption{Relative reduction of HS by quinol addition}
 % 	\label{tbl:reduction_quinol}
 % \end{table}
-Relative reduction rates were calculated as described, visualized in figures
+Relative reduction rates were calculated as shown in equation
+\ref{eq:relative_reduction}, visualized in figures
 \ref{fig:reduction_quinol_relative} and \ref{fig:reduction_superox_relative}. 
 
-It was shown that reduction of HS requires presence of quinol or superoxide, as
-DTT was unable to reduce HS directly in the negative control. Further it was
-shown that superoxide dismutase is able to effectively quench reduction of
-superoxide by disproprotionating superoxide to molecular oxygen and hydrogen
-peroxide.
+\begin{equation}
+	red_{\text{relative}} := \frac{od_{\text{substrate}} -
+	od_{\text{base}}}{od_{\text{full}} - od_{\text{base}}}
+	\label{eq:relative_reduction}
+\end{equation}
+
+It was shown that the change in absorption was caused by reduction of SOO, as
+the addition of DTT to substrate as part of the negative control did not cause
+a change in absorption. Further it was shown that superoxide dismutase is able
+to effectively quench reduction of superoxide by quickly disproprotionating
+superoxide to molecular oxygen and hydrogen peroxide.
 
 
 \subsubsection{\hs{} vs \hsmut{}}
 
-The data showed no significant difference in relative reduction between
-\hs{} and \hsmut{} was shown. This implies that the mutation has no effect on
-the enzyme activity if sufficient substrate is present. The mutation might have an
-effect on the affinity of the enzyme, as was shown later.
+The data showed no significant difference in relative reduction between \hs{}
+and \hsmut{}. This implied that the mutation had no effect on the enzyme
+activity if sufficient substrate was present. The mutation might have an effect
+on the affinity of the enzyme, lowering enzymatic activity if substrate
+concentration is limited, as was shown later.
 
 \subsubsection{Quinol as substrate}
 
 Relative reduction of reconstituted HS was shown to be close to the theoretical
 maximum of \SI{50}{\percent}, as only one of the two Hemes can be reduced by
 quinol. Relative reduction of solubilized HS was shown to be lower than that of
-reconstituted enzymes. This might have been the result of experimental error,
-or quinol has an easier time binding to reconstituted enzymes due to their
-proximity to the polar outer layer of liposomes.
+reconstituted enzymes, which might be the result of hydrophobic quinone binding
+to the hydrophobic inner parts of liposomes, which is close to where the active
+centre of HS is located\cite{superoxide_salvaging}.
 
 \subsubsection{Superoxide as substrate}
 
@@ -404,27 +416,39 @@ HS.
 
 \subsection{Fluorescence before and after TEV cleavage of reconstituted enzymes}
 
-To control whether overnight TEV-cleavage was sucessful, fluorescence of cleaved
-and uncleaved reconstituted samples was measured. Furthermore the ability to
-quench and restore fluorescence via addition of \ce{Cu^{2+}} and EDTA
-respectively was investigated. Collected data is shown in figure
+To control whether overnight TEV-cleavage was successful, fluorescence of
+cleaved and uncleaved reconstituted liposomes with \hsmut{} was measured.
+Furthermore the ability to quench and restore fluorescence via addition of
+\SI{1}{\milli\Molar} \ce{Cu^{2+}} and \SI{10}{\milli\Molar} EDTA respectively
+was investigated. Collected data is shown in figure
 \ref{fig:dsred_cleavage_fluorescence}.
 
 The sample with solubilized measurement showed that the method of quenching
 Dsred fluorescence with copper, and restoring it via addition of the chelating
 agent EDTA, works
 
-It was shown that fluorescence of uncleaved liposomes was able to be quenched
-similarly, with nearly complete quenching for sufficiently high copper
-concentrations in relation to liposome concentration. This implies that the
-liposome contained \hsdsred{} orientated such that Dsred is on the outside of the
-liposomes, where copper was able to reach it. The not quite complete quenching
-implies that either not enough copper had been added, or that some \hsdsred{} was
-oriented such that its Dsred is on the inside of the liposome. Further
-experiments with ncreased copper concentration would be needed to bring
-clarity.
+It was shown that fluorescence of reconstituted liposomes with \hsdsred{} was
+able to be quenched similarly, with nearly complete quenching for sufficiently
+high copper concentrations in relation to liposome concentration. This implied
+that the liposome contained \hsdsred{} orientated such that Dsred is on the
+outside of the liposomes, where copper was able to reach it. The not quite
+complete quenching implies that either not enough copper had been added, or
+that some \hsdsred{} was oriented such that its Dsred is on the inside of the
+liposome. Further experiments with increased copper concentration would be
+needed to bring clarity.
 
-\begin{figure}[h!]
+Similarly fluorescence of cleaved liposomes was able to be quenched via
+addition of copper and restored with EDTA. This implied that uncleaved
+\hsdsred{} had remained facing the outside of the liposomes, so cleavage had
+not been complete, or that small amounts of cleaved Dsred had remained in the
+supernatant after ultracentrifugation.
+
+While initial fluorescence of uncleaved reconstituted liposomes with \hsdsred{}
+was higher than that of TEV-treated ones, this allowed no direct conclusion on
+whether TEV cleavage was successful, as the concentration of TEV-treated vs
+untreated liposomes had not been standardised.
+
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{../img/dsred_cleavage_fluorescence.png}
 	\caption{Fluorescence and quenching thereof of cleaved and uncleaved reconstituted liposomes with \hsdsred{}}
@@ -457,10 +481,10 @@ $\text{SO}_{\text{rel}} := \frac{s_{\text{HS}}}{s_{\text{XO}} -
 s_{\text{SOD}}}$ , and relative reduction of superoxide - corresponding to
 enzymatic activity - as  $\text{HS-Activity}_{\text{rel}} := 1 -
 \text{SO}_{\text{rel}}$. Such results in a linear as well as double-reciprocal
-Lineweaver-Burke plot are shown in figures \ref{fig:activity_wt} and
-\ref{fig:activity_mut}.
+Lineweaver-Burke plot are shown in figures \ref{fig:activity_km} and
+\ref{fig:activity_km_lb}.
 
-A linear regresion $y = a \cdot x + b$ was performed on the Lineweaver-Burke
+A linear regression $y = a \cdot x + b$ was performed on the Lineweaver-Burke
 plot. Using those parameters the maximum reaction velocity and $K_m$ were
 determined as $v_\text{max} := b^{-1}$, $K_m := v_\text{max} \cdot a$.
 Calculated values are shown in table \ref{tbl:activity_km}. It was shown that
