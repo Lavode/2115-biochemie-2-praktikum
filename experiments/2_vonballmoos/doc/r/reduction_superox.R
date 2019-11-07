@@ -54,7 +54,7 @@ ggplot(df_full, aes(x = time, y = absorption, color = series)) +
   geom_line() +
   
   geom_vline(xintercept = 1, linetype = 'dotted', color = 'red') +
-  annotate("text", x = 0.9, y = 0.3, label = "Addition of XO", size = 3, color = 'red', hjust = 1) +
+  annotate("text", x = 1.1, y = 0.3, label = "Addition of XO", size = 3, color = 'red', hjust = 1) +
   geom_vline(xintercept = 3, linetype = 'dotted', color = 'black') +
   annotate("text", x = 2.9, y = 0.3, label = "Reduction with DTT", size = 3, color = 'black', hjust = 1) +
   
@@ -62,7 +62,11 @@ ggplot(df_full, aes(x = time, y = absorption, color = series)) +
   facet_wrap(vars(protein, state), ncol = 2) +
   coord_cartesian(ylim=c(0, 0.4)) +
   labs(title = "Reduction of HS under superoxide addition", x = "Time [min]", y = "Absorption at 428nm") +
-    theme_minimal() +
+  theme_minimal() +
+  theme(
+    legend.text = element_text(size = rel(1.2)),
+    legend.title = element_text(size = rel(1.2))
+  ) +
   ggsave('../img/reduction_superox.png', width = 20, units = 'cm', dpi = 'print')
 
 
@@ -80,5 +84,11 @@ ggplot(df_reduction, aes(x = protein, y = relative_reduction, fill = state)) +
   ) +
   labs(title = "Relative reduction of HS under superoxide addition", x = "Sample", y = "Reduction [%]") +
   theme_minimal() +
+  theme_minimal() +
+  theme(
+    legend.text = element_text(size = rel(1.2)),
+    legend.title = element_text(size = rel(1.2)),
+    axis.text.x = element_text(size = rel(1.3))
+  ) +
   ggsave('../img/reduction_superox_relative.png', width = 20, units = 'cm', dpi = 'print')
 

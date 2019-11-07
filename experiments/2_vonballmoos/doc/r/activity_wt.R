@@ -32,32 +32,3 @@ ggplot(df_full_qn, aes(x = time, y = absorption, color = series)) +
   theme_minimal() +
   ggsave('../img/activity_wt_quinone.png', width = 20, units = 'cm', dpi = 'print')
 
-df_slopes_long = read.csv('../data/raw/activity_wt_quinone_slope.csv')
-df_slopes_long$type = ifelse(df_slopes_long$start == 0.65, 'XO', 'HS')
-df_slopes_wide = spread(df_slopes_long %>% select(sample, slope, type, concentration), type, slope)
-sod_slope = (df_slopes_wide %>% filter(sample == 'SOD'))$HS
-avg_xo_slope = (df_slopes_wide %>% filter(sample != 'SOD') %>% summarize(avg=mean(XO)))$avg
-# We want to know how much the reduction of the dye was quenched, as this corresponds with the enzymatic activity.
-df_slopes_wide$relative_reduction = 1 - df_slopes_wide$HS / (avg_xo_slope - sod_slope)
-
-df_slopes = df_slopes_wide %>% filter(sample != 'SOD')
-df_slopes$concentration_inverse = 1 / df_slopes$concentration
-df_slopes$relative_reduction_inverse = 1 / df_slopes$relative_reduction
-
-ggplot(df_slopes, aes(x = concentration, y = relative_reduction)) +
-  geom_point() +
-  geom_line() +
-  #coord_cartesian(ylim=c(0, 0.4)) +
-  labs(title = "Determination of HS KM", subtitle = 'Wildtype', x = "Quinone concentration [μM]", y = "Relative superoxide oxidation [%]") +
-  theme_minimal() +
-  ggsave('../img/activity_wt_km.png', width = 20, units = 'cm', dpi = 'print')
-
-ggplot(df_slopes, aes(x = concentration_inverse, y = relative_reduction_inverse)) +
-  geom_point() +
-  geom_smooth(method = 'lm', se = FALSE) +
-  stat_regline_equation(label.x = 75, label.y = 1.72) +
-  labs(title = "Determination of HS KM", subtitle = 'Wildtype', x = "1 / Quinone concentration [1 / μM]", y = "1 / Relative superoxide oxidation [1 / %]") +
-  theme_minimal() +
-  ggsave('../img/activity_wt_km_lb.png', width = 20, units = 'cm', dpi = 'print')
-
-

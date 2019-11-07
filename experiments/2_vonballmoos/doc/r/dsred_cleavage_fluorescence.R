@@ -39,6 +39,6 @@ ggplot(df_full, aes(x = wavelength, y = intensity, color = volume)) +
     labeller = labeller(copper = copper.labs, edta = edta.labs)
   ) +
   coord_cartesian(xlim=c(570, 700), ylim=c(0, 100)) +
-  labs(title = "Fluorescence & quenching of HS at 555nm", subtitle = "Liposomes & solubilized", x = "Wavelength [nm]", y = "Intensity") +
+  labs(title = "Fluorescence & quenching of Dsred at 555nm", subtitle = "Liposomes & solubilized", x = "Wavelength [nm]", y = "Intensity") +
   theme_minimal() +
   ggsave('../img/dsred_cleavage_fluorescence.png', width = 20, units = 'cm', dpi = 'print')

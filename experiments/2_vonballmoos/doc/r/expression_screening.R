@@ -21,6 +21,10 @@ ggplot(df, aes(x = time, y = od, color = rha:iptg)) +
   labs(title = "OD600 measurement of E. coli cells during expression with various conditions", x = "Time since inoculation [min]", y = "OD600") +
   facet_wrap(vars(medium), nrow = 3) +
   theme_minimal() +
+  theme(
+    legend.text = element_text(size = rel(1.3)),
+    legend.title = element_text(size = rel(1.3))
+  ) +
   ggsave('../img/absorption_expression.png')
 
 df = read.csv("../data/expression_fluorescence.csv")
@@ -30,5 +34,9 @@ ggplot(df, aes(x = Medium, y = Fluorescence.Normalized, fill = Rhamnose:IPTG)) +
   geom_col(position = position_dodge()) +
   labs(title = "Fluorescence of E. coli cells after expression with various conditions", x = "", y = "Normalized fluorescence") + 
   theme_minimal() +
+  theme(
+    legend.text = element_text(size = rel(1.3)),
+    legend.title = element_text(size = rel(1.3))
+  ) +
   ggsave('../img/expression_fluorescence.png')
 

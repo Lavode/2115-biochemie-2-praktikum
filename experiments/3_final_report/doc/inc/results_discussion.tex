@@ -6,7 +6,7 @@
 
 \section{Transformation}
 
-The goal of bacterial transformation was to get competent E. Coli cells of the
+The goal of bacterial transformation was to get competent \ecoli{} cells of the
 LEMO21 (DE3) strain to take up pET28a-cybB561 plasmids, allowing for the
 selective overexpression of HS in presence of lactose or IPTG. Rhamnose allowed
 to selectively inhibit the T7 polymerase translating the HS gene.
@@ -60,7 +60,7 @@ HS.
 
 \subsection{Expression efficiency}
 
-After expression the amount of expressed HS-Dsred was measured via fluorescence
+After expression the amount of expressed \hsdsred{} was measured via fluorescence
 measurements. Results were normalized to cell density, giving an approximation
 of protein concentration per cell. Such normalized results are are shown in
 figure \ref{fig:fluorescence_expression}.
@@ -79,43 +79,38 @@ the linear relation between \odbact and cell density only holds for low values
 of \odbact, as well as the spectrophotometer being less accurate for values
 exceeding $1$.
 
-\subsubsection{HS-Dsred expression}
+\subsubsection{\hsdsred{} expression}
 
 Comparing the normalized fluorescence of IPTG-positive, Rhamnose-negative
 samples with other samples in the same media showed that addition of IPTG
-increased the amount of proteins - specifically HS-Dsred - which was expressed
+increased the amount of proteins - specifically \hsdsred{} - which was expressed
 per cell.
 
-\subsubsection{Limiting HS-Dsred expression with Rhamnose}
+\subsubsection{Limiting \hsdsred{} expression with Rhamnose}
 
 Addition of Rhamnose to samples was supposed to limit the overexpression of
-HS-Dsred, preventing a coplete stagnation of cell growth as well as the
+\hsdsred{}, preventing a coplete stagnation of cell growth as well as the
 potential buildup of inclusion bodies. \cite{memstar}.
 
-As Rhamnose-positive samples did not show any sign of HS-Dsred expression, with
+As Rhamnose-positive samples did not show any sign of \hsdsred{} expression, with
 fluorescence levels comparable to IPTG-negative samples, we conclude that
 either too much Rhamnose was added such that the T7 polymerase was inhibited
 fully, or that no IPTG had been added to those samples.
 
 
-\begin{figure*}
+\begin{figure}
 	\centering
-	\begin{subfigure}{0.45\textwidth}
-		\includegraphics[width=\linewidth]{../img/absorption_expression.png}
-		\caption{\odbact values over time during protein expression}
-		\label{fig:absorption_expression}
-	\end{subfigure}
-	~
-	\begin{subfigure}{0.45\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{../img/expression_fluorescence.png}
-		\caption{Fluorescence of samples after protein expression}
-		\label{fig:fluorescence_expression}
-	\end{subfigure}
+	\includegraphics[width=\linewidth]{../img/absorption_expression.png}
+	\caption{Monitoring expression speed via \odbact values over time}
+	\label{fig:absorption_expression}
+\end{figure}
 
-	\caption{Monitoring speed and efficiency of expression}
-	\label{fig:expression}
-\end{figure*}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../img/expression_fluorescence.png}
+	\caption{Fluorescence of samples after protein expression}
+	\label{fig:fluorescence_expression}
+\end{figure}
 
 \section{Purification}
 
@@ -175,7 +170,7 @@ concentrations are shown in table \ref{tbl:hs_concentration}.
 			% Conc [\si{\milli\Molar}] & 0.372 & 0.397 & 0.655 \\
 			% \bottomrule
 			\toprule
-			\multicolumn{2}{c}{Wildtype} \\
+			\multicolumn{2}{c}{\hs{}} \\
 			\midrule
 			$\Delta_{\text{OD}_{\SI{561}{\nm}}}$ & 0.042 \\
 			Baseline & 0.004 \\
@@ -183,7 +178,7 @@ concentrations are shown in table \ref{tbl:hs_concentration}.
 			Conc [\si{\milli\Molar}] & 0.372 \\
 
 			\midrule
-			\multicolumn{2}{c}{Mutant} \\
+			\multicolumn{2}{c}{\hsmut{}} \\
 			\midrule
 			$\Delta_{\text{OD}_{\SI{561}{\nm}}}$ & 0.043 \\
 			Baseline & 0.006 \\
@@ -191,7 +186,7 @@ concentrations are shown in table \ref{tbl:hs_concentration}.
 			Conc [\si{\milli\Molar}] & 0.397 \\
 
 			\midrule
-			\multicolumn{2}{c}{Dsred} \\
+			\multicolumn{2}{c}{\hsdsred{}} \\
 			\midrule
 			$\Delta_{\text{OD}_{\SI{561}{\nm}}}$ & 0.068 \\
 			Baseline & 0.013 \\
@@ -216,7 +211,7 @@ concentrations are shown in table \ref{tbl:hs_concentration}.
 Purification steps were checked with an SDS page, results shown in figure
 \ref{fig:sds}.
 
-\subsubsection{Wildtype \& mutant}
+\subsubsection{\hs{} \& \hsmut{}}
 
 Cyan marks HS, with an expected molecular weight of
 \SI{24}{\kilo\Da}\cite{pdb}. As was expected it was highly concentrated after
@@ -226,18 +221,18 @@ wash implying that a small amount was lost when washing the column. As the band
 of the after-ÄKTA steps seems smaller than the one preceding it it is assumed
 that some was also lost during the SEC.
 
-\subsubsection{Dsred}
+\subsubsection{\hsdsred{}}
 
-Green marks the HS-Dsred pair, with a combined expected weight of
+Green marks the \hsdsred{} pair, with a combined expected weight of
 \SI{49}{\kilo\Da} \cite{pdb}. It takes the place of plain HS in the samples of
-the wildtype and mutant. After TEV cleavage - that is from the `before loading'
-colum on onwards - there is no band at this height anymore, which shows that
-cleavage was successful. After cleavage the solo HS is marked in cyan, near its
-expected size of \SI{24}{\kilo\Da}. Of interest are faint bands on the same
-height in the samples before cleavage, which might imply that a small amount of
-HS-Dsred had been cleaved before. In the reverse IMAC it was mostly found in
-the flowthrough, as the His tag is on the Dsred. Small amounts can be seen in
-the elution, implying that an intermediary wash step might have been required.
+\hs{} and \hsmut{}. After TEV cleavage - that is from the `before loading' colum on
+onwards - there is no band at this height anymore, which shows that cleavage
+was successful. After cleavage the solo HS is marked in cyan, near its expected
+size of \SI{24}{\kilo\Da}. Of interest are faint bands on the same height in
+the samples before cleavage, which might imply that a small amount of \hsdsred{}
+had been cleaved before. In the reverse IMAC it was mostly found in the
+flowthrough, as the His tag is on the Dsred. Small amounts can be seen in the
+elution, implying that an intermediary wash step might have been required.
 
 Red marks Dsred with its molecular weight of \SI{25}{\kilo\Da}, further
 identified by being on the same height as the pure Dsred loaded in the last
@@ -260,13 +255,13 @@ found.
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{../img/sds_wt_mut}
-        \caption{SDS PAGE gel of wildtype and mutant}
+	\caption{SDS PAGE gel of \hs{} and \hsmut{}}
         \label{fig:sds_wt_mut}
     \end{subfigure}
     ~
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{../img/sds_dsred_tev_cleavage.png}
-        \caption{SDS PAGE gel of dsRed including cleaved dsRed}
+	\caption{SDS PAGE gel of \hsdsred{} including cleaved \hsdsred{}}
         \label{fig:sds_dsred_cleaved}
     \end{subfigure}
     \caption{SDS gels of three protein variants}
@@ -275,7 +270,7 @@ found.
 
 \subsection{Purification efficiency}
 
-Fluorescence values of HS-Dsred samples, from aliquots taken during various
+Fluorescence values of \hsdsred{} samples, from aliquots taken during various
 steps of the purification, scaled to sample volume, are shown in figure
 \ref{fig:purification_fluorescence}. They allowed the tracking of losses during
 purification steps.
@@ -344,10 +339,10 @@ superoxide by disproprotionating superoxide to molecular oxygen and hydrogen
 peroxide.
 
 
-\subsubsection{Wildtype vs mutant}
+\subsubsection{\hs{} vs \hsmut{}}
 
 The data showed no significant difference in relative reduction between
-wildtype and mutant was shown. This implies that the mutation has no effect on
+\hs{} and \hsmut{} was shown. This implies that the mutation has no effect on
 the enzyme activity if sufficient substrate is present. The mutation might have an
 effect on the affinity of the enzyme, as was shown later.
 
@@ -422,17 +417,17 @@ agent EDTA, works
 It was shown that fluorescence of uncleaved liposomes was able to be quenched
 similarly, with nearly complete quenching for sufficiently high copper
 concentrations in relation to liposome concentration. This implies that the
-liposome contained HS-Dsred orientated such that Dsred is on the outside of the
+liposome contained \hsdsred{} orientated such that Dsred is on the outside of the
 liposomes, where copper was able to reach it. The not quite complete quenching
-implies that either not enough copper had been added, or that some HS-Dsred was
+implies that either not enough copper had been added, or that some \hsdsred{} was
 oriented such that its Dsred is on the inside of the liposome. Further
 experiments with ncreased copper concentration would be needed to bring
 clarity.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=\linewidth]{../img/dsred_cleavage_fluorescence.png}
-	\caption{Fluorescence and quenching thereof of cleaved and uncleaved reconstituted liposomes with cyb561-Dsred}
+	\caption{Fluorescence and quenching thereof of cleaved and uncleaved reconstituted liposomes with \hsdsred{}}
 	\label{fig:dsred_cleavage_fluorescence}
 \end{figure}
 
@@ -444,8 +439,8 @@ and BO3 oxidase), and WST-1 dye to measure superoxide concentration via
 absorption measurement at \SI{455}{\nm} was used.
 
 In a first step, sufficient HS concentration to quench superoxide production as
-efficiently as SOD was determined, which was \SI{4.764}{\micro\Molar} for the
-mutant, \SI{0.496}{\micro\Molar} for the wild type.
+efficiently as SOD was determined, which was \SI{4.764}{\micro\Molar} for 
+\hsmut{}, \SI{0.496}{\micro\Molar} for \hs{}.
 
 In a second step the concentration of superoxide via WST-1 reduction was
 observed. As before the system was prepared and measurements started. XO and HS
@@ -462,59 +457,49 @@ $\text{SO}_{\text{rel}} := \frac{s_{\text{HS}}}{s_{\text{XO}} -
 s_{\text{SOD}}}$ , and relative reduction of superoxide - corresponding to
 enzymatic activity - as  $\text{HS-Activity}_{\text{rel}} := 1 -
 \text{SO}_{\text{rel}}$. Such results in a linear as well as double-reciprocal
-Lineweaver-Burke plot are shown in figure \ref{fig:activity}.
+Lineweaver-Burke plot are shown in figures \ref{fig:activity_wt} and
+\ref{fig:activity_mut}.
 
 A linear regresion $y = a \cdot x + b$ was performed on the Lineweaver-Burke
 plot. Using those parameters the maximum reaction velocity and $K_m$ were
 determined as $v_\text{max} := b^{-1}$, $K_m := v_\text{max} \cdot a$.
 Calculated values are shown in table \ref{tbl:activity_km}. It was shown that
-the $K_m$ of the mutant was two two three orders of magnitude lower than that
-of the wildtype, implying that the mutation either lowered the affinity of the
+the $K_m$ of \hsmut{} was two two three orders of magnitude lower than that
+of \hs{}, implying that the mutation either lowered the affinity of the
 enzyme for its substrate, or decreased the speed at which they are processed.
 
-\begin{figure*}
+\begin{figure}
 	\centering
-	\begin{subfigure}{0.4\textwidth}
-		\includegraphics[width=\linewidth]{../img/activity_wt_km.png}
-		\caption{Relative wildtype activity}
-		\label{fig:activity_wt_km}
-	\end{subfigure}
-	~
-	\begin{subfigure}{0.4\textwidth}
+	\begin{subfigure}{\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{../img/activity_wt_km_lb.png}
-		\caption{LB plot of wildtype activity}
-		\label{fig:activity_wt_km_lb}
+		\includegraphics[width=\linewidth]{../img/activity_km.png}
+		\caption{Relative activity}
+		\label{fig:activity_km}
+	\end{subfigure}
+	\\
+	\begin{subfigure}{\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{../img/activity_km_lb.png}
+		\caption{LB plot of activity}
+		\label{fig:activity_km_lb}
 	\end{subfigure}
 
-	\begin{subfigure}{0.4\textwidth}
-		\includegraphics[width=\linewidth]{../img/activity_mut_km.png}
-		\caption{Relative mutant activity}
-		\label{fig:activity_mut_km}
-	\end{subfigure}
-	~
-	\begin{subfigure}{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{../img/activity_mut_km_lb.png}
-		\caption{LB plot of mutant activity}
-		\label{fig:activity_mut_km_lb}
-	\end{subfigure}
-
-	\caption{Activity determination of wildtype and mutant}
+	\caption{Activity determination of \hs{} \& \hsmut{}}
 	\label{fig:activity}
-\end{figure*}
+\end{figure}
 
-\begin{table*}
+\begin{table}
 	\centering
-	\begin{tabu}{lllll}
+	\begin{tabu}{l|ll}
 		\toprule
-		Protein & Slope $a$ & Y-intercept $b$ & $v_{\text{max}} = b^{-1}$ & $K_m = v_{\text{max}} \cdot a$ \\
-		\midrule
-		Wildtype & 0.0065 & 1.1 & \SI{90.9}{\percent} & \SI{0.0059}{\micro\Molar} \\
-		Mutant & 0.24 & 1.1 & \SI{90.9}{\percent} & \SI{0.218}{\micro\Molar} \\
+		Protein & \hs{} & \hsmut{} \\
+		Slope $a$ & 0.0065 & 0.24 \\
+		Y-intercept $b$ & 1.1 & 1.1 \\
+		$v_{\text{max}} = b^{-1}$ & \SI{90.9}{\percent} & \SI{90.9}{\percent} \\
+		$K_m = v_{\text{max}} \cdot a$  & \SI{0.0059}{\micro\Molar} & \SI{0.218}{\micro\Molar} \\
 		\bottomrule
 	\end{tabu}
 	\caption{Determination of $K_m$ for HS}
 	\label{tbl:activity_km}
-\end{table*}
+\end{table}
 
